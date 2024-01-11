@@ -4,6 +4,7 @@ const ParchmentContainer = (props: { children: React.ReactNode }) => {
   const { children } = props;
   const childRef = React.useRef<HTMLDivElement>(null);
   const [parchmentHeight, setParchmentHeight] = React.useState<number>(5000);
+  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
   const updateParchmentSize = () => {
     if (childRef.current === null) return;
@@ -35,22 +36,31 @@ const ParchmentContainer = (props: { children: React.ReactNode }) => {
   return (
     <>
       <div className="relative flex flex-col w-3/4 h-auto mx-auto p-16">
-        <div id="parchment" style={{ height: `${parchmentHeight}px` }}></div>
+        <div
+          id="parchment"
+          style={{ height: `${parchmentHeight}px` }}
+          className={isSafari ? "" : "notSafari"}
+        ></div>
         <div ref={childRef}>{children}</div>
       </div>
 
-      {/* <svg>
-        <filter id="wavy2">
-          <feTurbulence
-            x="0"
-            y="0"
-            baseFrequency="0.02"
-            numOctaves="5"
-            seed="1"
-          ></feTurbulence>
-          <feDisplacementMap in="SourceGraphic" scale="20"></feDisplacementMap>
-        </filter>
-      </svg> */}
+      {!isSafari && (
+        <svg>
+          <filter id="wavy2">
+            <feTurbulence
+              x="0"
+              y="0"
+              baseFrequency="0.02"
+              numOctaves="5"
+              seed="1"
+            ></feTurbulence>
+            <feDisplacementMap
+              in="SourceGraphic"
+              scale="20"
+            ></feDisplacementMap>
+          </filter>
+        </svg>
+      )}
     </>
   );
 };
