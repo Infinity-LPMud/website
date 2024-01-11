@@ -39,7 +39,7 @@ const ParchmentContainer = (props: { children: React.ReactNode }) => {
         <div ref={childRef}>{children}</div>
       </div>
 
-      <svg>
+      {/* <svg>
         <filter id="wavy2">
           <feTurbulence
             x="0"
@@ -50,7 +50,7 @@ const ParchmentContainer = (props: { children: React.ReactNode }) => {
           ></feTurbulence>
           <feDisplacementMap in="SourceGraphic" scale="20"></feDisplacementMap>
         </filter>
-      </svg>
+      </svg> */}
     </>
   );
 };
