@@ -3,7 +3,7 @@ import React from "react";
 const ParchmentContainer = (props: { children: React.ReactNode }) => {
   const { children } = props;
   const childRef = React.useRef<HTMLDivElement>(null);
-  const [parchmentHeight, setParchmentHeight] = React.useState<number>();
+  const [parchmentHeight, setParchmentHeight] = React.useState<number>(5000);
 
   const updateParchmentSize = () => {
     if (childRef.current === null) return;
@@ -11,8 +11,14 @@ const ParchmentContainer = (props: { children: React.ReactNode }) => {
   };
 
   React.useEffect(() => {
-    updateParchmentSize();
-  }, [childRef.current]);
+    const timeoutId = setTimeout(() => {
+      updateParchmentSize();
+    }, 200);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, []);
 
   React.useEffect(() => {
     const handleResize = () => {

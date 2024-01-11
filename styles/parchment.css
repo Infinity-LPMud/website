@@ -123,3 +123,29 @@ main p {
   color: black;
   font-size: 250%;
 }
+/* Styling the link */
+a.important-link {
+  display: inline-block; /* Make it a block element to apply transformations */
+  transition: transform 0.3s; /* Smooth transition for the transform property */
+  text-decoration: underline; /* Underline by default */
+}
+
+/* Adding underline effect */
+a.important-link::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: #000; /* Change the color to your preference */
+  transition: width 0.3s; /* Smooth transition for the width property */
+}
+
+/* Hover effect - underline and transform */
+a.important-link:hover {
+  text-decoration: none; /* Remove default underline on hover */
+  transform: scale(1.2);
+}
+
+a.important-link:hover::after {
+  width: 100%; /* Full width on hover */
+}
