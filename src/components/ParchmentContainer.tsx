@@ -3,13 +3,16 @@ import React from "react";
 const ParchmentContainer = (props: { children: React.ReactNode }) => {
   const { children } = props;
   const childRef = React.useRef<HTMLDivElement>(null);
-  const [parchmentHeight, setParchmentHeight] = React.useState<number>(5000);
-  const [windowSize, setWindowSize] = React.useState<number>();
+  const [parchmentHeight, setParchmentHeight] = React.useState<number>();
 
   const updateParchmentSize = () => {
     if (childRef.current === null) return;
     setParchmentHeight(childRef.current.getBoundingClientRect().height + 100);
   };
+
+  React.useEffect(() => {
+    updateParchmentSize();
+  }, [childRef.current]);
 
   React.useEffect(() => {
     const handleResize = () => {
