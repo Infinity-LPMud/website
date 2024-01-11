@@ -27,7 +27,7 @@ body {
 
 body {
   font: var(--fontSize) / 200% "Caveat", cursive;
-  background-image: url(https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+  background-image: url("/assets/woodbg.png");
   background-size: cover;
 }
 
@@ -36,13 +36,6 @@ main {
   width: 100%;
   height: auto;
 }
-
-/* WARNING ! This solution seems to not work on all navigators.
-This problem was reported to me on :
-https://stackoverflow.com/questions/14585101/old-paper-background-texture-with-just-css/
-
-August 2021 : ok on Chrome v92+, Firefox v90+, Edge v92+
-*/
 
 #parchment {
   position: absolute;
