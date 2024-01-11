@@ -9,6 +9,7 @@ export default {
       },
       fontFamily: {
         medieval: ["MedievalSharp", "cursive"],
+        caveat: ["Caveat", "cursive"],
       },
     },
   },
