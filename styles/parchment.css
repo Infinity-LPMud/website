@@ -1,12 +1,12 @@
 /* @import url("https://fonts.googleapis.com/css?family=Pirata+One|Bilbo+Swash+Caps&display=swap"); */
 
-@font-face {
+/* @font-face {
   font-family: "Caveat";
   src: url("/path/to/Caveat-Regular.ttf");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-}
+} */
 
 :root {
   --fontSize: calc((1vw + 1vh) * 0.75);
@@ -47,12 +47,13 @@ August 2021 : ok on Chrome v92+, Firefox v90+, Edge v92+
 #parchment {
   position: absolute;
   display: flex;
-  width: 75%;
+  width: 100%;
   /* center page with absolute position */
   top: 0%;
   left: 50%;
   transform: translate(-50%, 0);
   margin: 2em 0;
+  z-index: -1;
   padding: 4em;
   box-shadow: 2px 3px 20px black, 0 0 125px #8f5922 inset;
   background: #fffef0;

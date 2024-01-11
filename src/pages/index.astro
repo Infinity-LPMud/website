@@ -1,26 +1,10 @@
 ---
 import "../../styles/parchment.css";
+import ParchmentContainer from "../components/ParchmentContainer";
 ---
 
-<script>
-  // First call to define "parchment" height
-  document.onload = ScrollHeight();
-
-  // Redraw when viewport is modified
-  window.addEventListener("resize", function (event) {
-    ScrollHeight();
-  });
-
-  function ScrollHeight() {
-    var content = document.querySelector("#parchment");
-    var container = document.querySelector("#contain");
-
-    content.style.height = 3500 + "px";
-  }
-</script>
 <main>
-  <div id="parchment"></div>
-  <div id="contain">
+  <ParchmentContainer client:only="react">
     <p>
       <img src="/assets/logo.png" class="mx-auto" />
     </p>
@@ -86,14 +70,12 @@ import "../../styles/parchment.css";
       unwavering.
     </p>
 
-    <p>Sincerely,</p>
-    <p>The Infinity MUD Team</p>
     <!-- This a red wine cachet ... but shh ! -->
     <p class="cachet"><img src="https://i.postimg.cc/4NBYNqCR/22.png" /></p>
     <div id="signature">
-      Imperator Caesar Flavius Constantinus<br />Pius Felix Invictus Augustus
+      Malc<br />The Banned Merchant
     </div>
-  </div>
+  </ParchmentContainer>
 </main>
 
 <svg>
