@@ -26,7 +26,7 @@ body {
 }
 
 body {
-  font: var(--fontSize) / 200% "Caveat", cursive;
+  font: var(--fontSize) / 200% serif;
   background-image: url("/assets/woodbg.png");
   background-size: cover;
 }
@@ -115,7 +115,9 @@ main p {
   text-align: right;
   color: black;
   font-size: 250%;
+  font-family: "Caveat", cursive; /* Add the Caveat font-family here */
 }
+
 /* Styling the link */
 a.important-link {
   display: inline-block; /* Make it a block element to apply transformations */
