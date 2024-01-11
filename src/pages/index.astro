@@ -5,9 +5,18 @@ import ParchmentContainer from "../components/ParchmentContainer";
 
 <main>
   <ParchmentContainer client:only="react">
-    <p>
-      <img src="/assets/logo.png" class="mx-auto" />
-    </p>
+    <div class="relative">
+      <img
+        src="/assets/logo.png"
+        class="mx-auto relative z-10"
+        style="bottom: -3em;"
+      />
+      <img
+        src="/assets/infinity_logo_new.svg"
+        class="mx-auto relative z-20"
+        style="top: -30px;"
+      />
+    </div>
 
     <p>Greetings, brave soul!</p>
 
