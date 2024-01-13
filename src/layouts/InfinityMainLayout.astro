@@ -20,13 +20,12 @@ import "../../styles/global.css";
     />
   </head>
   <body>
-    <!-- Navigation Bar -->
-    <nav class="flex items-center justify-between">
+    <!-- <nav class="flex items-center justify-between">
       <div>
         <a href="/">Logo/Brand</a>
       </div>
       <div class="lg:hidden">
-        <!-- Mobile Menu Icon -->
+
         <button id="mobile-menu-button">
           <svg
             class="w-6 h-6"
@@ -44,18 +43,18 @@ import "../../styles/global.css";
         </button>
       </div>
       <div class="hidden lg:flex space-x-4">
-        <!-- Navigation Links -->
+       
         <a href="/">Home</a>
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
       </div>
     </nav>
-    <!-- Mobile Menu -->
+
     <div id="mobile-menu" class="lg:hidden hidden">
       <a href="/">Home</a>
       <a href="/about">About</a>
       <a href="/contact">Contact</a>
-    </div>
+    </div> -->
+    <slot />
   </body>
-  <slot />
 </html>
