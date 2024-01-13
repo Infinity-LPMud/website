@@ -75,12 +75,6 @@ main p {
   opacity: 0.6;
 }
 
-#labarum {
-  width: 20%;
-  margin-left: calc((100% - 20%) / 2);
-  height: auto;
-}
-
 .cachet {
   /* image width = 210px and height = 250px */
   /*  5 is one common denominator 210 = 5 * 42 */
