@@ -1,24 +1,15 @@
 /* @import url("https://fonts.googleapis.com/css?family=Pirata+One|Bilbo+Swash+Caps&display=swap"); */
 
-/* @font-face {
-  font-family: "Caveat";
-  src: url("/path/to/Caveat-Regular.ttf");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-} */
-
 :root {
   --fontSize: calc((1vw + 1vh) * 0.75);
 }
 
-/* *,
 *:before,
 *:after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-} */
+}
 
 html,
 body {
@@ -29,10 +20,29 @@ body {
   font: var(--fontSize) / 200% serif;
 }
 
+.page-header {
+  font-family: Caveat, cursive;
+  font-size: 5em;
+  color: #7f3300;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.section-header {
+  font-family: Caveat, cursive;
+  font-size: 4em;
+  color: #7f3300;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
 main {
   postion: relative;
   width: 100%;
   height: auto;
+  padding-bottom: 1rem;
 }
 
 #parchment {
@@ -53,7 +63,15 @@ main p {
   font-size: 2.25em;
   color: #7f3300;
   margin-top: 0.75em;
-  text-align: justify;
+  text-align: center;
+}
+
+ul li {
+  font-size: 2.25em;
+  color: #7f3300;
+  margin-top: 0.75em;
+  text-align: center;
+  list-style: none;
 }
 
 #contain {
@@ -103,7 +121,6 @@ main p {
 a.important-link {
   display: inline-block; /* Make it a block element to apply transformations */
   transition: transform 0.3s; /* Smooth transition for the transform property */
-  text-decoration: underline; /* Underline by default */
 }
 
 /* Adding underline effect */
@@ -118,10 +135,13 @@ a.important-link::after {
 
 /* Hover effect - underline and transform */
 a.important-link:hover {
-  text-decoration: none; /* Remove default underline on hover */
   transform: scale(1.2);
 }
 
 a.important-link:hover::after {
   width: 100%; /* Full width on hover */
+}
+
+a {
+  text-decoration: underline;
 }
