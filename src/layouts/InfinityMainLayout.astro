@@ -1,13 +1,13 @@
 ---
-const { title } = Astro.props;
 import "../../styles/global.css";
+import { SEO } from "astro-seo";
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,6 +17,31 @@ import "../../styles/global.css";
     <link
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"
       rel="stylesheet"
+    />
+
+    <SEO
+      title="Infinity LPMud"
+      description="Prepare For Adventure"
+      openGraph={{
+        basic: {
+          title: "Prepare For Advenure",
+          type: "Gaming",
+          image: "https://infinity-website-beta.vercel.app/assets/logo.png",
+        },
+      }}
+      extend={{
+        // extending the default link tags
+        link: [{ rel: "icon", href: "/favicon.ico" }],
+        // extending the default meta tags
+        meta: [
+          {
+            name: "twitter:image",
+            content: "https://infinity-website-beta.vercel.app/assets/logo.png",
+          },
+          { name: "twitter:title", content: "Infinity LPmud" },
+          { name: "twitter:description", content: "Prepare For Adventure" },
+        ],
+      }}
     />
   </head>
   <body>
