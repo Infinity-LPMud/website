@@ -11,6 +11,9 @@ export default {
         medieval: ["MedievalSharp", "cursive"],
         caveat: ["Caveat", "cursive"],
       },
+      backgroundImage: {
+        "paper-bg": 'url("/assets/paper-bg2.jpg")',
+      },
     },
   },
   plugins: [],
