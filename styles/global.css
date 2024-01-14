@@ -29,7 +29,12 @@ body {
   line-height: 1.5;
 }
 
+.hidden {
+  display: none;
+}
+
 .page-header {
+  padding-top: 5rem;
   font-size: 5em;
 }
 
