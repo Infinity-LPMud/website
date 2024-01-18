@@ -37,10 +37,10 @@ body {
   text-align: center;
 }
 
-.page-header {
-  padding-top: 5rem;
+.page-header {  
   font-size: 5em;
   line-height: 1.5;
+  padding-top: 2rem;
 }
 
 .section-header {
@@ -56,15 +56,16 @@ main {
 
 main p {
   /* font-size: 2.25em; */
-  color: #7f3300;
+  color: #522100;
   margin-top: 0.75em;
-  text-align: center;
+  text-align: left;
+  font-family: "IM Fell English", serif;
+  font-optical-sizing: auto;
 }
 
 ul li {
   font-size: 2rem;
-  color: #7f3300;
-  margin-top: 0.75em;
+  color: #7f3300;  
   text-align: center;
   list-style: none;
 }
@@ -89,3 +90,15 @@ ul li {
 a {
   text-decoration: underline;
 }
+
+.bg-paper-bg {
+  /* background-size: cover;
+  background-attachment: fixed;   */
+}
+
+.bg-paper-bg > .relative {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.logo { max-width: 350px; }
