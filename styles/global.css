@@ -20,22 +20,30 @@ body {
   font: var(--fontSize) / 200% serif;
 }
 
+.nav-text {
+  font-family: MedievalSharp, cursive;
+  color: #7f3300;
+
+  text-align: center;
+}
+
 .header-style {
   font-family: MedievalSharp, cursive;
   color: #7f3300;
   padding-top: 3rem;
   padding-bottom: 1rem;
   text-align: center;
-  line-height: 1.5;
 }
 
 .page-header {
   padding-top: 5rem;
   font-size: 5em;
+  line-height: 1.5;
 }
 
 .section-header {
   font-size: 4em;
+  line-height: 1.5;
 }
 
 main {

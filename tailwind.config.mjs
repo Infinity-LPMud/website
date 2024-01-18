@@ -9,15 +9,16 @@ export default {
       colors: {
         backgroundColor: "#333", // For now
         navText: "#7f3300;",
+        logo: "#dec09a",
       },
       fontFamily: {
         medieval: ["MedievalSharp", "cursive"],
         caveat: ["Caveat", "cursive"],
       },
       backgroundImage: {
-        // "paper-bg": 'url("/assets/paper-bg2.jpg")',
         "paper-bg":
           'linear-gradient(rgba(200, 200, 200, .5), rgba(200, 200, 200, .5)), url("/assets/paper-bg2.jpg")',
+        nav: 'linear-gradient(rgba(200, 200, 200, .5), rgba(200, 200, 200, .5)), url("/assets/nav-bg.jpg")',
       },
     },
   },
