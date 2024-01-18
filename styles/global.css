@@ -37,7 +37,7 @@ body {
   text-align: center;
 }
 
-.page-header {  
+.page-header {
   font-size: 5em;
   line-height: 1.5;
   padding-top: 2rem;
@@ -64,14 +64,21 @@ main p {
 }
 
 ul li {
+  color: #522100;
+  margin-top: 0.75em;
+  text-align: left;
+  font-family: "IM Fell English", serif;
+  font-optical-sizing: auto;
+}
+
+nav ul li {
+  margin-top: 0;
   font-size: 2rem;
-  color: #7f3300;  
+  color: #7f3300;
   text-align: center;
   list-style: none;
   margin-top: 0.75em;
 }
-
-nav ul li { margin-top: 0; }
 
 .cachet {
   /* image width = 210px and height = 250px */
@@ -104,4 +111,6 @@ a {
   margin: 0 auto;
 }
 
-.logo { max-width: 350px; }
+.logo {
+  max-width: 350px;
+}
