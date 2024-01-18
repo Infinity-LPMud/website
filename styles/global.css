@@ -54,20 +54,6 @@ main {
   padding-bottom: 1rem;
 }
 
-#parchment {
-  position: absolute;
-  display: flex;
-  width: 100%;
-  /* center page with absolute position */
-  top: 0%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  margin: 2em 0;
-  z-index: -1;
-  padding: 4em;
-  box-shadow: 2px 3px 20px black, 0 0 125px #8f5922 inset;
-}
-
 main p {
   /* font-size: 2.25em; */
   color: #7f3300;
