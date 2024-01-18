@@ -1,14 +1,7 @@
 /* @import url("https://fonts.googleapis.com/css?family=Pirata+One|Bilbo+Swash+Caps&display=swap"); */
 
 :root {
-  --fontSize: calc((1vw + 1vh) * 0.75);
-}
-
-*:before,
-*:after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  --fontSize: calc((1vw + 1vh) * 0.5);
 }
 
 html,
@@ -51,6 +44,7 @@ main {
   width: 100%;
   height: auto;
   padding-bottom: 1rem;
+  padding-left: 3rem;
 }
 
 #parchment {
@@ -68,37 +62,18 @@ main {
 }
 
 main p {
-  font-size: 2.25em;
+  /* font-size: 2.25em; */
   color: #7f3300;
   margin-top: 0.75em;
   text-align: center;
 }
 
 ul li {
-  font-size: 2.25em;
+  font-size: 2.25rem;
   color: #7f3300;
   margin-top: 0.75em;
   text-align: center;
   list-style: none;
-}
-
-#contain {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 75%;
-  height: auto;
-  margin: 0 auto;
-  padding: 4em;
-}
-
-.inkTitle {
-  font-size: 3em;
-  font-family: Pirata One, sans-serif;
-  text-align: center;
-  line-height: 3em;
-  color: black;
-  opacity: 0.6;
 }
 
 .cachet {
@@ -110,44 +85,12 @@ ul li {
   margin-left: auto;
 }
 
-#labarum img,
-.cachet img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
 #signature {
   text-align: right;
   color: black;
   font-size: 250%;
   font-family: Caveat, cursive;
   padding-bottom: 3rem;
-}
-
-/* Styling the link */
-a.important-link {
-  display: inline-block; /* Make it a block element to apply transformations */
-  transition: transform 0.3s; /* Smooth transition for the transform property */
-}
-
-/* Adding underline effect */
-a.important-link::after {
-  content: "";
-  display: block;
-  height: 2px;
-  width: 0;
-  background-color: #000; /* Change the color to your preference */
-  transition: width 0.3s; /* Smooth transition for the width property */
-}
-
-/* Hover effect - underline and transform */
-a.important-link:hover {
-  transform: scale(1.2);
-}
-
-a.important-link:hover::after {
-  width: 100%; /* Full width on hover */
 }
 
 a {
