@@ -4,6 +4,11 @@
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto;
+  }
+}
 :root {
   --fontSize: calc((1vw + 1vh) * 0.5);
 }
