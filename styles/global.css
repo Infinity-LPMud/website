@@ -68,7 +68,10 @@ ul li {
   color: #7f3300;  
   text-align: center;
   list-style: none;
+  margin-top: 0.75em;
 }
+
+nav ul li { margin-top: 0; }
 
 .cachet {
   /* image width = 210px and height = 250px */
