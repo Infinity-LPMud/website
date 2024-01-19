@@ -2,6 +2,7 @@
 import InfinityMainLayout from "../layouts/InfinityMainLayout.astro";
 import QandA from "../components/QandA.astro";
 import PageHeader from "../components/PageHeader.astro";
+import PageSection from "../components/PageSection.astro";
 ---
 
 <InfinityMainLayout>
@@ -78,6 +79,19 @@ import PageHeader from "../components/PageHeader.astro";
   </QandA>
 
   <QandA question="What Kind of Hardware Does Infinity Run On?">
+    <div>
+      Today, Infinity runs on a 64 bit VM running CentOS 7.9, with 4 GB RAM and
+      450 GB disk space.
+    </div>
+    <div>
+      On disk, Infinity presently consumes approximately 1.7GB, including all
+      player files, Wizard areas and home page support files. We use an
+      additional 1.2GB of space for archived logs, archived driver source,
+      scripts, etc.
+    </div>
+  </QandA>
+
+  <QandA question="What Kind of Hardware has Infinity Run On In the Past?">
     <div>
       At the end of 1994 and the beginning of 1995, Infinity changed sites, from
       the College of Computer Science at Northeastern University to Syracuse
@@ -178,18 +192,6 @@ import PageHeader from "../components/PageHeader.astro";
     <div>
       Later, Infinity ran as a 64 bit VM running CentOS 5.8, with 2 GB RAM and
       120 GB disk space.
-    </div>
-
-    <div>
-      Today, Infinity runs on a 64 bit VM running CentOS 7.9, with 4 GB RAM and
-      450 GB disk space.
-    </div>
-
-    <div>
-      On disk, Infinity presently consumes approximately 1.7GB, including all
-      player files, Wizard areas and home page support files. We use an
-      additional 1.2GB of space for archived logs, archived driver source,
-      scripts, etc.
     </div>
   </QandA>
 </InfinityMainLayout>
