@@ -1,0 +1,16 @@
+---
+interface Props {
+  title?: string;
+  img?: {
+    src: string;
+    alt?: string;
+  };
+}
+const { title, img } = Astro.props;
+---
+
+{title && <h1 class="header-style page-header">{title}</h1>}
+{img && <img src={img.src} alt={img?.alt} class="mx-auto h-250 w-250" />}
+<p class="text-xl">
+  <slot />
+</p>

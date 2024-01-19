@@ -1,13 +1,13 @@
 ---
+import PageHeader from "../../components/PageHeader.astro";
+import PageSection from "../../components/PageSection.astro";
 import InfinityMainLayout from "../../layouts/InfinityMainLayout.astro";
 ---
 
 <InfinityMainLayout>
-  <h1 class="header-style page-header">Qualstar</h1>
+  <PageHeader title="Qualstar" />
 
-  <h1 class="header-style section-header">WILLIAMS, Daniel J.</h1>
-
-  <p class="text-xl">
+  <PageSection title="WILLIAMS, Daniel J.">
     Suddenly, in Dorchester, August 26th. Beloved son of the late Robert J. Sr.
     and Claire (Horton) Williams. Loving brother of Cynthia M. Veglia of
     Dorchester, Robert J. Williams Jr. of CO, Christopher M. Williams of NH,
@@ -22,29 +22,27 @@ import InfinityMainLayout from "../../layouts/InfinityMainLayout.astro";
     Interment Private. For directions and guestbook, <a
       href="https://www.jmurphyfh.com">www.jmurphyfh.com</a
     >. Funeral Home handicapped accessible with ample parking.
-  </p>
+  </PageSection>
 
-  <div class="header-style section-header">Qualstar's Legacy</div>
-
-  <p class="text-xl">
+  <PageSection title="Qualstar's Legacy">
     Qualstar was the creator of many of the greatest areas and quests on
     Infinity. In fact, four of his quests live on from the time they opened,
     still considered to be among the hardest and best quests ever, with 3 of
     them being expert level quests, and HRC being a wizard quest:
-  </p>
 
-  <div class="flex items-center justify-center">
-    <p>
-      <ul class="text-xl">
-        <li>Telna 1</li>
-        <li>Telna 2</li>
-        <li>High Rock Castle (HRC)</li>
-        <li>Amark's Magicka University</li>
-      </ul>
-    </p>
-  </div>
+    <div class="flex items-center justify-center">
+      <p>
+        <ul class="text-xl">
+          <li>Telna 1</li>
+          <li>Telna 2</li>
+          <li>High Rock Castle (HRC)</li>
+          <li>Amark's Magicka University</li>
+        </ul>
+      </p>
+    </div>
+  </PageSection>
 
-  <p class="text-xl">
+  <PageSection>
     Q, you will be missed... but your legacy will live on forever!
-  </p>
+  </PageSection>
 </InfinityMainLayout>

@@ -1,17 +1,16 @@
 ---
 interface Props {
   question: string;
-  answer?: string;
 }
-const { question, answer } = Astro.props;
+const { question } = Astro.props;
 ---
 
 <p class="text-xl">
   <div class="qa text-2xl">
-    <span class="text-3xl">Q:</span>{question}
+    <span class="text-3xl"></span>{question}
     <div class="qa text-xl">
-      <span class="text-xl">A:</span>
-      {answer}
+      <span class="text-xl"></span>
+      <slot />
     </div>
   </div>
 </p>

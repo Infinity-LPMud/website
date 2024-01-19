@@ -1,38 +1,34 @@
 ---
 import InfinityMainLayout from "../layouts/InfinityMainLayout.astro";
+import PageSection from "../components/PageSection.astro";
+import PageHeader from "../components/PageHeader.astro";
 ---
 
 <InfinityMainLayout>
-  <!-- <main class="bg-paper-bg min-h-screen bg-opacity-75">
-    <div class="relative pt-28 mx-2 px-6 md:px-1"> -->
   <img
     alt="Infinity LPMud"
     src="/assets/infinity-logo-combined.png"
     class="mx-auto relative z-10 logo"
   />
 
-  <h1 class="header-style page-header">Greetings, Brave Adventurer</h1>
-
-  <p class="text-xl">
+  <PageHeader title="Greetings, Brave Adventurer">
     Are you ready for a journey beyond the ordinary? An adventure that
     transcends the realms of imagination and challenges the limits of your
     creativity? Look no further, for Infinity MUD awaits you!
-  </p>
-  <p class="text-xl">
+  </PageHeader>
+
+  <PageSection>
     Infinity is a free, multi-player, text-based adventure game full of
     mind-bending quests and epic battles. No download required -
     <a style="font-weight:bold" href="https://infinitymud.com/play"
       >Start Your Adventure Now</a
     >.
-  </p>
+  </PageSection>
 
-  <h1 class="header-style section-header">Quests</h1>
-  <img
-    src="/assets/quests.png"
-    alt="Quest Image"
-    class="mx-auto h-250 w-250 mb-1"
-  />
-  <p class="text-xl">
+  <PageSection
+    title="Quests"
+    img={{ src: "/assets/quests.png", alt: "Quest Image" }}
+  >
     Embark on a captivating journey within Infinity, where quests transcend the
     ordinary and offer a range of difficulties to challenge adventurers of all
     levels. Our quests are meticulously crafted, each providing players with a
@@ -40,47 +36,44 @@ import InfinityMainLayout from "../layouts/InfinityMainLayout.astro";
     sense of discovery and encourage players to think creatively and
     strategically to overcome the hurdles that await them in this ever-evolving
     world.
-  </p>
-  <p class="text-xl">
+  </PageSection>
+
+  <PageSection>
     Infinity MUD isn't merely a game; it's an intellectual journey, a testament
     to the power of community, and an invitation to challenge yourself in ways
     beyond the conventional.
-  </p>
+  </PageSection>
 
-  <h1 class="header-style section-header">Combat</h1>
-  <img
-    src="/assets/orc-battle.png"
-    alt="Orc Image"
-    class="mx-auto h-250 w-250"
-  />
-  <p class="text-xl">
+  <PageSection
+    title="Combat"
+    img={{ src: "/assets/orc-battle.png", alt: "Orc Image" }}
+  >
     Prepare to engage in thrilling battles within, where combat and magic
     intertwine to create a dynamic and immersive experience. Whether you seek
     legendary weapons, enchanted artifacts, or mystical relics, the world of
     Infinity MUD offers a vast array of possibilities, making each adventure a
     distinct and captivating journey filled with surprises and strategic depth.
-  </p>
-  <p class="text-xl">
+  </PageSection>
+
+  <PageSection>
     More than the conventional hack-and-slash MUD, Infinity emphasizes a
     gameplay experience centered around critical thinking and problem-solving.
     Engage in a world where success is not solely determined by raw combat
     prowess but by the acuity of your intellect and the decisions you make.
-  </p>
-  <p class="text-xl">
+  </PageSection>
+
+  <PageSection>
     Do you have what it takes to defeat the legendary Demon King? Can you obtain
     the Monk's powerful Katana?
     <a style="font-weight:bold" href="https://infinitymud.com/play"
       >Glory awaits you in Infinity</a
     >.
-  </p>
+  </PageSection>
 
-  <h2 class="header-style section-header">Guilds</h2>
-  <img
-    src="/assets/dragon-battle.png"
-    alt="Dragon Image"
-    class="mx-auto h-250 w-250"
-  />
-  <p class="text-xl">
+  <PageSection
+    title="Guilds"
+    img={{ src: "/assets/dragon-battle.png", alt: "Dragon Image" }}
+  >
     Dive into the rich tapestry of Infinity MUD's guild system, where players
     are invited to align themselves with unique factions, each offering a
     distinct playstyle and set of skills. Choose to become a master of the
@@ -95,20 +88,14 @@ import InfinityMainLayout from "../layouts/InfinityMainLayout.astro";
     experience, Infinity MUD ensures that every adventurer finds a unique path
     to follow, shaping their journey and interactions within this dynamic and
     ever-expanding universe.
-  </p>
+  </PageSection>
 
-  <h1 class="header-style section-header">How to Play</h1>
-  <img
-    src="/assets/client-use.png"
-    alt="User Playing Infinity"
-    class="mx-auto h-250 w-250"
-  />
-  <p class="text-xl">
+  <PageSection
+    title="How To Play"
+    img={{ src: "/assets/client-use.png", alt: "User Playing Infinity" }}
+  >
     Experience the seamless entry into the realms of Infinity MUD with our
-    user-friendly <a
-      href="https://infinitymud.net/play/"
-      class="important-link"
-    >
+    user-friendly <a href="https://infinitymud.net/play/">
       custom web client</a
     >, offering instant access without the hassle of software installations.
     Whether you're on your computer or using your mobile device, the web client
@@ -128,12 +115,12 @@ import InfinityMainLayout from "../layouts/InfinityMainLayout.astro";
     us effortlessly, whether through our intuitive web client or the
     customizable GUI client, and immerse yourself in a world where your story
     unfolds at your fingertips.
-  </p>
+  </PageSection>
 
-  <p class="text-xl">
+  <PageSection>
     Are you ready to redefine your idea of gaming? Your destiny awaits in
     Infinity MUD.
-  </p>
+  </PageSection>
 
   <!-- This a red wine cachet ... but shh ! -->
   <p class="cachet"><img src="https://i.postimg.cc/4NBYNqCR/22.png" /></p>
