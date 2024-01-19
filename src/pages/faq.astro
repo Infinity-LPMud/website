@@ -1,0 +1,34 @@
+---
+import InfinityMainLayout from "../layouts/InfinityMainLayout.astro";
+import QandA from "../components/QandA.astro";
+
+const qanda = [
+  {
+    question: "What Kind of Mud Is Infinity?",
+    answer: `Infinity originally started out in the beginning of 1992 as an LPMud
+  running the 3.1.2 driver in compatibility mode, using a slightly modified
+  2.4.5 mudlib. Over the past several years, we have migrated to the Amylaar
+  driver, and followed the 3.2.1 development tree to LDMud, and are now
+  running the latest stable release of 3.4.2. Our mudlib has been heavily
+  modified by the ArchWizards, integrating new ideas to increase the
+  enjoyment of players, decrease the amount of work for the ArchWizards, and
+  to provide the Wizards with a comfortable environment for them to create
+  areas in.`,
+  },
+  {
+    question: "Why is Samuel Adams beer in the Pub and Tavern?",
+    answer: `Infinity has been fortunate to receive permission from Jim Koch, president of the Boston Beer Company, to use the name of Samuel Adams on our beers in Infinity. This probably had a lot to do with the fact that Samuel Adams is Mutara's beer of choice. Besides, when was the last time you saw a Firebreather in a liquor store?
+
+Infinity currently offers two varieties of Samuel Adams. Samuel Adams Boston Lager is offered in the Pub in Town, and Boston Ale is offered in the Drunken Horse Tavern. We plan to rotate these beers to reflect the seasonal brews released by the Boston Beer Company shortly.`,
+  },
+];
+---
+
+<InfinityMainLayout>
+  <h1 class="header-style page-header">FAQ</h1>
+  {
+    qanda.map((entry) => (
+      <QandA question={entry.question} answer={entry.answer} />
+    ))
+  }
+</InfinityMainLayout>

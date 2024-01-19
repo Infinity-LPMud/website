@@ -63,6 +63,14 @@ main p {
   font-optical-sizing: auto;
 }
 
+.qa {
+  color: #522100;
+  margin-top: 0.75em;
+  text-align: left;
+  font-family: "IM Fell English", serif;
+  font-optical-sizing: auto;
+}
+
 ul li {
   color: #522100;
   margin-top: 0.75em;
