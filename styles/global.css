@@ -41,6 +41,11 @@ body {
   font-size: 5em;
   line-height: 1.5;
   padding-top: 2rem;
+  white-space: nowrap;
+
+  @media screen and (max-width: 767px) {
+    white-space: normal;
+  }
 }
 
 .section-header {
