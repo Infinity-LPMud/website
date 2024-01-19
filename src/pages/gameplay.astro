@@ -5,7 +5,11 @@ import PageHeader from "../components/PageHeader.astro";
 ---
 
 <InfinityMainLayout>
-  <PageHeader
+  <PageHeader title="Gameplay">
+    Infinity is a big place, with a rich history and unique areas. Delve into
+    learning more about how things work on Infinity.
+  </PageHeader>
+  <PageSection
     title="Players"
     img={{ src: "/assets/players.png", alt: "Infinity Players" }}
   >
@@ -17,11 +21,12 @@ import PageHeader from "../components/PageHeader.astro";
     prerequisite as players engage in epic battles, facing formidable foes and
     overcoming challenges that test the limits of their courage. The game
     provides a multitude of opportunities for players to shape their destinies
-    by joining various guilds, each offering a unique set of skills and
-    privileges. Whether unraveling the secrets of ancient dungeons or engaging
-    in fierce combat, the players of Infinity LPMud showcase both intelligence
-    and bravery as they embark on thrilling quests within this virtual realm.
-  </PageHeader>
+    by joining various <a href="/guilds">guilds</a>, each offering a unique set
+    of skills and privileges. Whether unraveling the secrets of ancient dungeons
+    or engaging in fierce combat, the players of Infinity LPMud showcase both
+    intelligence and bravery as they embark on thrilling quests within this
+    virtual realm.
+  </PageSection>
 
   <PageSection
     title="Advancement"

@@ -76,4 +76,120 @@ import PageHeader from "../components/PageHeader.astro";
       </ul>
     </div>
   </QandA>
+
+  <QandA question="What Kind of Hardware Does Infinity Run On?">
+    <div>
+      At the end of 1994 and the beginning of 1995, Infinity changed sites, from
+      the College of Computer Science at Northeastern University to Syracuse
+      University. In order to make the move, we needed to purchase our own hard
+      drive and controller. Our users gave generously to the Infinity
+      Administration; with these funds, we purchased a Seagate gigabyte SCSI
+      drive, and an Adaptec 1522A SCSI controller.
+    </div>
+
+    <div>
+      In May of 1996, we moved from Syracuse University to Legacy Creative
+      Ventures, Inc., in Seattle, Washington. We held yet another fund drive and
+      ended up with our current P75 box. We now have much more room to expand,
+      and without the generosity of our players, we couldn't have found a way to
+      come back on the net. We thank you, and hope that you appreciate the
+      continued existence of the game.
+    </div>
+
+    <div>
+      Infinity received a massive upgrade in December of 1999. The system that
+      was shipped to Bigtoad was pathetic. It consisted of:
+    </div>
+
+    <div class="mt-1">
+      <ul>
+        <li>Asus P/I-P55TP4N Motherboard w/512K pipelined burst cache</li>
+        <li>Intel P75 CPU overclocked to P100</li>
+        <li>32MB SDRAM</li>
+        <li>ISA Oak Technology OTIVGA video card</li>
+        <li>ISA 3Com Etherlink III (3C509-COMBO) network card</li>
+        <li>ISA Adaptec 1542 SCSI adapter</li>
+        <li>HP SureStore 1GB SCSI hard drive</li>
+        <li>Quantum ProDrive LPS 270MB SCSI hard drive</li>
+        <li>Mitsumi IDE CDROM drive</li>
+        <li>1.44MB floppy drive</li>
+      </ul>
+    </div>
+
+    <div class="mt-1">
+      That box was in sorry condition in other ways. The case was poorly
+      designed, making it necessary to remove the motherboard to add or remove
+      hard drives. The system bus speed was set to 50MHz (correct for a P75) but
+      the clock multiplier was set to 2, driving the CPU core at 100MHz. No
+      serious attempt had been made to cool the overclocked CPU -- it's amazing
+      that the system hadn't melted down. There was a CPU fan in the system, but
+      it was much too small for a Pentium. The fan appeared to have been
+      designed for a 486 CPU. In any case, since there was no way to attach the
+      fan to the heat sink on the CPU, it was just dangling inside the case.
+    </div>
+
+    <div>
+      Apparently someone had lost the SCSI ID jumpers for the Quantum hard
+      drive. They had been replaced by soldering wires onto each of the ID
+      jumper pins, and twisting them together to set the SCSI ID.
+    </div>
+
+    <div>
+      While there was a CDROM drive in the case, there was no IDE cable, and no
+      power was connected to the CDROM drive. The reason for this became
+      apparent when an IDE cable was installed -- the system would not boot with
+      the CDROM drive connected.
+    </div>
+
+    <div>The system did not have a mouse, keyboard or monitor with it.</div>
+
+    <div>
+      The only items that were retained from that system were the motherboard,
+      32MB of RAM, the floppy drive and the 1GB SCSI hard drive. Even the case
+      was thrown out and replaced. Since Bigtoad is a bit of a hardware nut, he
+      was offended by a system that had no PCI adapters but had all the ISA
+      slots in use. All the adapter cards were promptly replaced.
+    </div>
+
+    <div>
+      Bigtoad rebuilt the system, and then later upgraded it to consist of:
+    </div>
+
+    <div class="mt-1">
+      <ul>
+        <li>Asus P/I-P55TP4N Motherboard w/512K pipelined burst cache</li>
+        <li>Intel P133 CPU</li>
+        <li>64MB SDRAM</li>
+        <li>PCI Trident video card</li>
+        <li>PCI 3Com 10/100 3C905B network card</li>
+        <li>PCI Advansys 3922 SCSI-2 adapter</li>
+        <li>Seagate Barracuda ST15150N 4GB SCSI hard drive</li>
+        <li>HP SureStore 1GB SCSI hard drive</li>
+        <li>Toshiba XM4101B SCSI CDROM drive</li>
+        <li>1.44MB floppy drive</li>
+      </ul>
+    </div>
+
+    <div class="mt-1">
+      By the standards of the day, it was still a pretty pathetic system, but
+      it's all we needed for a MUD. This system ran Red Hat 6.1 Linux.
+    </div>
+
+    <div>
+      Later, Infinity ran as a 64 bit VM running CentOS 5.8, with 2 GB RAM and
+      120 GB disk space.
+    </div>
+
+    <div>
+      Today, Infinity runs on a 64 bit VM running CentOS 7.9, with 4 GB RAM and
+      450 GB disk space.
+    </div>
+
+    <div>
+      On disk, Infinity presently consumes approximately 1.7GB, including all
+      player files, Wizard areas and home page support files. We use an
+      additional 1.2GB of space for archived logs, archived driver source,
+      scripts, etc.
+    </div>
+  </QandA>
 </InfinityMainLayout>
