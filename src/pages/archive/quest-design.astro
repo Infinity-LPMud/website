@@ -1,8 +1,12 @@
 ---
 import ArchiveLayout from "../../layouts/ArchiveLayout.astro";
+const breadCrumbs = [
+  { href: "/", label: "Home" },
+  { href: "/archive", label: "Archive" },
+];
 ---
 
-<ArchiveLayout>
+<ArchiveLayout breadCrumbs={breadCrumbs} title="Quest Design">
   <div style="font-style: italic;">
     <p class="text-black">
       Malc: This page is taken from <a

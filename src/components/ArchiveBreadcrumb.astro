@@ -1,0 +1,23 @@
+---
+interface Props {
+  breadCrumbs: { href: string; label: string }[];
+  title: string;
+}
+const { breadCrumbs, title } = Astro.props;
+---
+
+<nav class="flex items-center space-x-2 text-md text-gray-500">
+  {
+    breadCrumbs.map((breadCrumb) => (
+      <>
+        <span>
+          <a href={breadCrumb.href} class="hover:text-gray-700">
+            {breadCrumb.label}
+          </a>
+        </span>
+        <span>&gt;</span>
+      </>
+    ))
+  }
+  <span class="font-semibold">{title}</span>
+</nav>
