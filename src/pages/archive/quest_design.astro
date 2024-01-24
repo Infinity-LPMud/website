@@ -1,0 +1,241 @@
+<div style="font-style: italic;">
+  <p>
+    Malc: This page is taken from <a
+      href="http://www.lysator.liu.se/mud/questdesign.html"
+      class="text-blue-500">here</a
+    >.<br />
+    While not everything applies to Infinity, it is still a very good guide. I know
+    Macbeth well, and he is one of the best MUD designers I've ever known.
+  </p>
+  <p class="mb-2">
+    Ellery: The text below was adapted by me for TubMud. Don't feel irritated by
+    the occasional references to it and my having a different character name
+    there. Also, don't worry about the patronizing mood I employ in the notes
+    every now and then - this text is meant to enforce a mud policy on TubMud,
+    it's only a source of ideas here on Nanny.
+  </p>
+  <p class="mb-2">
+    Macbeth: This is taken from the manual of a compiler for INFOCOM-like games.
+    And while muds are different from text adventures, they have still enough in
+    common to use similar design criteria for them. Besides, it is a very good
+    text.
+  </p>
+</div>
+
+<div class="mb-4">
+  <h2 class="text-xl font-semibold mb-2">1. A Bill of Player's Rights</h2>
+  <p class="mb-2">
+    Perhaps the most important point about designing a game is to think as a
+    player and not a designer. I think the least a player deserves is:
+  </p>
+  <ol class="list-decimal pl-6 mb-4">
+    <li class="mb-2">Not to be killed without warning</li>
+    <p class="ml-6 mb-2">
+      At its most basic level, this means that a room with three exits, two of
+      which lead to instant death and the third to treasure, is unreasonable
+      without some hint. Mention of which brings us to:
+    </p>
+    <li class="mb-2">Not to be given horribly unclear hints</li>
+    <p class="ml-6 mb-2">
+      Many years ago, I played a game in which going north from a cave led to a
+      lethal pit. The hint was: there was a pride of lions carved above the
+      doorway. Good hints can be skilfully hidden, or very brief (I think, for
+      example, the hint in the moving-rocks plain problem in "Spellbreaker" is a
+      masterpiece) but should not need explaining even after the event.
+    </p>
+
+    <p class="mb-2">A more sophisticated version of (1) leads us to:</p>
+    <li class="mb-2">
+      To be able to win without experience of past lives
+      <p class="ml-6 mb-2">
+        Suppose, for instance, there is a nuclear bomb buried under some
+        anonymous floor somewhere, which must be disarmed. It is unreasonable to
+        expect a player to dig up this floor purely because in previous games,
+        the bomb blew up there. To take a more concrete example, in "The Lurking
+        Horror" there is something which needs cooking for the right length of
+        time. As far as I can tell, the only way to find out the right time is
+        by trial and error. But you only get one trial per game. In principle a
+        good player should be able to play the entire game out without doing
+        anything illogical. In similar vein:
+      </p>
+    </li>
+
+    <li class="mb-2">
+      To be able to win without knowledge of future events
+      <p class="ml-6 mb-2">
+        For example, the game opens near a shop. You have one coin and can buy a
+        lamp, a magic carpet or a periscope. Five minutes later you are
+        transported away without warning to a submarine, whereupon you need a
+        periscope. If you bought the carpet, bad luck.
+      </p>
+    </li>
+
+    <li class="mb-2">
+      Not to have the game closed off without warning
+      <p class="ml-6 mb-2">
+        Closed off meaning that it would become impossible to proceed at some
+        later date. If there is a papier-mache wall which you can walk through
+        at the very beginning of the game, it is extremely annoying to find that
+        a puzzle at the very end requires it to still be intact, because every
+        one of your saved games will be useless. Similarly it is quite common to
+        have a room which can only be visited once per game. If there are two
+        different things to be accomplished there, this should be hinted at.
+      </p>
+    </li>
+
+    <li class="mb-2">
+      Not to need to do unlikely things
+      <p class="ml-6 mb-2">
+        For example, a game which depends on asking a policeman about something
+        he could not reasonably know about. (Less extremely, the problem of the
+        hacker's keys in "The Lurking Horror".) Another unlikely thing is
+        waiting in uninteresting places. If you have a junction such that after
+        five turns an elf turns up and gives you a magic ring, a player may well
+        never spend five turns there and never solve what you intended to be
+        straightforward. On the other hand, if you were to put something which
+        demanded investigation in the junction, it might be fair enough. ("Zork
+        III" is especially poor in this respect.)
+      </p>
+    </li>
+    <li class="mb-2">
+      Not to need to do boring things for the sake of it
+      <p class="ml-6 mb-2">
+        In the bad old days many games would make life difficult by putting
+        objects needed to solve a problem miles away from where the problem was,
+        despite all logic - say, putting a boat in the middle of a desert. Or,
+        for example, it might be fun to have a four-discs tower of Hanoi puzzle
+        in a game. But not an eight-discs one.
+      </p>
+      <p class="ml-6 mb-2">
+        Macbeth: This applies to mazes as well. However, they are somewhat
+        different. See the section on mazes below for more information.
+      </p>
+    </li>
+
+    <li class="mb-2">
+      Not to have to type exactly the right verb
+      <p class="ml-6 mb-2">
+        For instance, looking inside a box finds nothing, but searching it does.
+        Or consider the following dialogue (amazingly, from "Sorcerer"): >unlock
+        journal (with the small key) No spell would help with that! >open
+        journal (with the small key) The journal springs open.
+      </p>
+      <p class="ml-6 mb-2">
+        This is so misleading as to constitute a bug. But it's an easy design
+        fault to fall into. (Similarly, the wording needed to use the brick in
+        Zork II strikes me as quite unfair. Or perhaps I missed something
+        obvious.)
+      </p>
+    </li>
+
+    <li class="mb-2">
+      To be allowed reasonable synonyms
+      <p class="ml-6 mb-2">
+        In the same room in "Sorcerer" is a "woven wall hanging" which can
+        instead be called "tapestry" (though not "curtain"). This is not a
+        luxury, it's an essential.
+      </p>
+    </li>
+
+    <li class="mb-2">
+      To have a decent parser
+      <p class="ml-6 mb-2">
+        This goes without saying. At the very least it should provide for taking
+        and dropping multiple objects.
+      </p>
+      <p class="ml-6 mb-2">
+        Macbeth: Unfortunately, the parser is the weakest spot of every LPmud so
+        far. There isn't much you can do about it. I'm currently thinking about
+        a way of making better parsing easier.
+      </p>
+    </li>
+
+    <li class="mb-2">
+      To have reasonable freedom of action
+      <p class="ml-6 mb-2">
+        Being locked up in a long sequence of prisons, with only brief escapes
+        between them, is not all that entertaining. After a while the player
+        begins to feel that the designer has tied him to a chair in order to
+        shout the plot at him.
+      </p>
+      <p class="ml-6 mb-2">
+        Macbeth: Likewise for MUDs. Too often quest designers choose the easy
+        way out by making a room teleport-proof and blocking all exits until the
+        victim has been told the entire story.
+      </p>
+    </li>
+
+    <li class="mb-2">
+      Not to depend much on luck
+      <p class="ml-6 mb-2">
+        Small chance variations add to the fun, but only small ones. The thief
+        in "Zork I" seems to me to be just about right in this respect, and
+        similarly the spinning room in "Zork II". But a ten-ton weight which
+        fell down and killed you at a certain point in half of all games is just
+        annoying.
+      </p>
+    </li>
+
+    <li class="mb-2">
+      To be able to understand a problem once it is solved
+      <p class="ml-6 mb-2">
+        This may sound odd, but many problems are solved by accident or trial
+        and error. A guard-post which can be passed only if you are carrying a
+        spear, for instance, ought to have some indication that this is why
+        you're allowed past. (The most extreme example must be the notorious
+        Bank of Zork.)
+      </p>
+    </li>
+    <li class="mb-2">
+      Not to be given too many red herrings
+      <p class="ml-6 mb-2">
+        A few red herrings make a game more interesting. A very nice feature of
+        "Zork I", "II" and "III" is that they each contain red herrings
+        explained in the others (in one case, explained in "Sorcerer"). But
+        difficult puzzles tend to be solved last, and the main technique players
+        use is to look at their maps and see what's left that they don't
+        understand. This is frustrated when there are many insoluble puzzles and
+        useless objects. So you can expect players to lose interest if you
+        aren't careful. My personal view is that red herrings ought to have some
+        clue provided (even only much later): for instance, if there is a
+        useless coconut near the beginning, then perhaps much later an
+        absent-minded botanist could be found who wandered about dropping them.
+        The coconut should at least have some rationale.
+      </p>
+    </li>
+
+    <li class="mb-2">
+      To have a good reason why something is impossible
+      <p class="ml-6 mb-2">
+        Unless it's also funny, a very contrived reason why something is
+        impossible just irritates. (The reason one can't walk on the grass in
+        "Trinity" is only just funny enough, I think.)
+      </p>
+    </li>
+
+    <li class="mb-2">
+      Not to need to be American to understand hints
+      <p class="ml-6 mb-2">
+        The diamond maze in "Zork II" being a case in point. Similarly, it's
+        polite to allow the player to type English or American spellings or
+        idiom. For instance "Trinity" endears itself to English players in that
+        the soccer ball can be called "football" - soccer is a word almost never
+        used in England.
+      </p>
+      <p class="ml-6 mb-2">
+        Macbeth: I cannot stress this point enough. Currently, nine out of ten
+        players who play TubMud are native German speakers and not used to the
+        intricacies of the English language.
+      </p>
+    </li>
+
+    <li class="mb-2">
+      To know how the game is getting on
+      <p class="ml-6 mb-2">
+        In other words, when the end is approaching, or how the plot is
+        developing. Once upon a time, score was the only measure of this, but
+        hopefully not any more.
+      </p>
+    </li>
+  </ol>
+</div>
