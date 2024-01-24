@@ -18,9 +18,9 @@ body {
   height: 100%;
 }
 
-body {
+/* body {
   font: var(--fontSize) / 200% serif;
-}
+} */
 
 .nav-text {
   font-family: MedievalSharp, cursive;
@@ -113,11 +113,6 @@ nav ul li {
 
 a {
   text-decoration: underline;
-}
-
-.bg-paper-bg {
-  /* background-size: cover;
-  background-attachment: fixed;   */
 }
 
 .bg-paper-bg > .relative {
