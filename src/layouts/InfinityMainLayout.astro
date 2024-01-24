@@ -2,6 +2,10 @@
 import "../../styles/global.css";
 import { SEO } from "astro-seo";
 import Navbar from "../components/Navbar.astro";
+interface Props {
+  title?: string;
+}
+const { title } = Astro.props;
 ---
 
 <html lang="en">
@@ -25,7 +29,9 @@ import Navbar from "../components/Navbar.astro";
     />
 
     <SEO
-      title="Infinity LPMud: Prepare For Adventure"
+      title={title
+        ? `${title} - InfinityMUD.com`
+        : "Infinity LPMud: Prepare For Adventure"}
       description="Infinity is a free, multi-player, text-based adventure game full of mind-bending quests and epic battles. No download required. Play now"
       openGraph={{
         basic: {
