@@ -2,6 +2,7 @@
 import { SEO } from "astro-seo";
 import "../../styles/global.css";
 import ArchiveBreadcrumb from "../components/ArchiveBreadcrumb.astro";
+import SEOHead from "../components/SEOHead.astro";
 interface Props {
   breadCrumbs: { href: string; label: string }[];
   title: string;
@@ -14,38 +15,7 @@ const { breadCrumbs, title } = Astro.props;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <SEO
-      title={title
-        ? `${title} - InfinityMUD.com`
-        : "Infinity LPMud: Prepare For Adventure"}
-      description="Infinity is a free, multi-player, text-based adventure game full of mind-bending quests and epic battles. No download required. Play now"
-      openGraph={{
-        basic: {
-          title: "Prepare For Advenure",
-          type: "Gaming",
-          image: "https://infinity-website-beta.vercel.app/assets/logo.png",
-        },
-      }}
-      extend={{
-        link: [{ rel: "icon", href: "/favicon.ico" }],
-
-        meta: [
-          {
-            name: "twitter:image",
-            content: "https://infinity-website-beta.vercel.app/assets/logo.png",
-          },
-          {
-            name: "twitter:title",
-            content: "Infinity LPmud: Prepare For Adventure",
-          },
-          {
-            name: "twitter:description",
-            content:
-              "A free, multi-player, text-based adventure game full of mind-bending quests and epic battles. No download required. Play now.",
-          },
-        ],
-      }}
-    />
+    <SEOHead title={title} />
   </head>
   <body>
     {
