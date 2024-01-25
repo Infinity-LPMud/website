@@ -3,6 +3,7 @@ import { SEO } from "astro-seo";
 interface Props {
   title?: string;
 }
+
 const { title: _title, ...rest } = Astro.props;
 const title = _title
   ? `${_title} - InfinityMUD.com`
@@ -39,5 +40,4 @@ const title = _title
       },
     ],
   }}
-  {...rest}
 />
