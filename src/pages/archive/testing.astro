@@ -1,0 +1,153 @@
+---
+import ArchiveLayout from "../../layouts/ArchiveLayout.astro";
+const breadCrumbs = [
+  { href: "/", label: "Home" },
+  { href: "/archive", label: "Archive" },
+];
+---
+
+<ArchiveLayout title="Testing" breadCrumbs={breadCrumbs}>
+  <h2 class="text-center text-2xl mb-3">
+    PAGE 2 - THE NEW ZORK TIMES - FALL 1984
+  </h2>
+
+  <p class="italic text-center">(c) 1984 Infocom, Inc.</p>
+
+  <h3 class="text-center text-xl">THEY'RE NEVER SATISFIED</h3>
+
+  <p class="text-center text-lg italic mb-1">by Dave Lebling</p><p>
+    I had my first encounter with a professional play-tester two years ago, when
+    I was writing <span class="italic">Starcross</span>. As I worked, every so
+    often my concentration would be broken by a horrible cackling laugh from a
+    few doors down the hall. Jerry had found another bug.
+  </p>
+
+  <span class="font-bold">Infocom</span>'s Quality Control Department
+  (informally, play-testers) makes sure our stories are bug-free before they get
+  published. From the first, horrifically buggy version "thrown in the swimming
+  pool," to the final, perfect (hah!) version that we ship, the play-testers
+  pound away, searching for flaws. It starts out very simply. Let's take <i
+    >Suspect</i
+  > for a victim ... oops, I mean an example. When a game first enters testing, it's
+  a delicate thing, easily upset:
+  <pre>
+    > BARTENDER, GIVE ME A DRINK
+    "Sorry, I've been hired to mix drinks and that's all."
+    
+    > DANCE WITH ALICIA
+    Which Alicia do you mean, Alicia or the overcoat?
+    
+    Veronica's body is slumped behind the desk, strangled with a lariat.
+    
+    > TALK TO VERONICA
+    Veronica's body is listening.
+    </pre>
+
+  Little bugs, you know? Things no one would notice. At this point the tester's
+  job is fairly easy. The story is like a house of cards -- it looks pretty
+  solid but the slightest touch collapses it:
+  <pre>
+    Media Room
+    > ENTER
+    **FATAL ERROR: Pushdown Overflow**
+    </pre>
+
+  Mysteries have a lot of scope for truly odd bugs, since they have so many
+  characters running around. Throughout the testing process, I would get reports
+  like:
+  <pre>
+    "Duffy is having serious problems .... "
+    "Alicia isn't functioning too well .... "
+    "The detective seems stuck in the North Hallway .... "
+    </pre>
+
+  <i>Suspect</i> has thirteen characters (counting you) and a few bit players, so
+  at times it resembled a Marx brothers movie. Testers are relentless. Once they
+  find out they can talk to a corpse, you can confidently expect a list of all the
+  other things that will listen to them: cars, tables, chairs, waste baskets, anything.
+  This is sometimes called "rubbing it in." They had a particularly gleeful time
+  with poor Veronica's body. It's not enough that she's been murdered. No, first
+  they decide to hide the body. Then, to make things worse, they carry her around,
+  presumably slung over the shoulder.
+  <pre>
+    
+    > SHOW CORPSE TO MICHAEL
+    Michael doesn't appear interested.
+    </pre>
+
+  Of course, Michael is only Veronica's husband; why would he be interested?
+  After that, it was open season! Bodies everywhere:
+  <pre>
+    "I carried Veronica's body into the Ballroom.  No one noticed."
+    "Sergeant Duffy walked right by while I was carrying the body.
+    He didn't notice it."
+    "I put the body in the chair in the Library.
+    Col. Marston came and went without seeing it."
+    "I picked up the body right in front of the detective. "
+    </pre>
+
+  That wasn't enough:
+  <pre>
+    > THROW CORPSE IN FIREPLACE
+    Veronica's body is now in the fireplace.
+    
+    > ATTACK CORPSE WITH CROWBAR
+    Veronica's body jumps out of the way.
+    </pre>
+
+  Eventually, that all got sorted out: Veronica stayed safely dead, and her
+  party guests got less blase about corpses. Producing a piece of interactive
+  fiction is an odd combination of debugging a program and writing a story. Bug
+  reports can concern anything from a stack overflow to a misplaced comma. There
+  was a running battle (finally settled by Fowler's <i>English Usage</i>) over
+  when a comma goes inside a quotation mark and when outside. By the same token,
+  bugs can concern something as microcomputer-oriented as the stack size on the
+  Atari implementation of the story. Some comments from testers would not be out
+  of place in a report from an editor at a major book publisher:
+  <pre>
+    "Alicia is acting out of character." 
+    "Why would Michael react that way when told about the murder?"
+    "Ostmann's motivations seem too obscure."
+    </pre>
+
+  Some comments are directly keyed off of programming bugs that would make a
+  BASIC programmer blush:
+  <pre>
+    "Game prints garbage when Duffy enters room."
+    "You can drop Veronica's pulse on the floor."
+    </pre>
+
+  There are several stages in implementing one of our stories. During the first
+  stage, the author is so pleased that it works at all that any bug reports are
+  welcomed. During this stage the typical bug concerns two rooms that connect in
+  only one direction (you can go east from the first to the second but there is
+  no way to go back). During the second stage, all of the testers and several
+  other game authors have had a chance to play it, and the really nasty comments
+  come in. During this stage, bugs cause serious changes in the plot, and
+  sub-plots are added or removed. This is when "debugging" is more like writing
+  another draft of a novel than debugging a program. The plot is hardened into
+  its final form, and outside testers are given their first crack at the story.
+  Finally comes the stage in which every bug is seen by the author as an
+  imposition. I can always tell when a story is almost finished by my rising
+  level of frustration at seeing new bugs in my mailbox. At some point, coming
+  to the office in the morning becomes an exercise in procrastination. You see,
+  at <b>Infocom</b>
+  there is a hall with all the mailboxes in it, and you have to walk past the mailboxes
+  to get to the coffee machine. The question becomes, "How much do I really want
+  my first cup of coffee this morning?" You can always avert your eyes as you walk
+  by the mailboxes, but that's almost too obvious. Better is to make a casual appraisal
+  as you walk by. "Hmm. Looks like a fairly small stack this morning...." Then you
+  can walk to the coffee machine with a clear conscience. Even a cup of yummy coffee
+  won't improve things when you see "page 1 of 12" on the first bug report form.
+  Amazingly enough, it all works out in the end. Sometimes a full-page bug report
+  will turn out to be caused by a simple little error, and you can check off three
+  or four subsidiary bugs with one stroke. Sometimes a simple little thing you've
+  glossed over three times as unimportant will be re-reported, and you realize it's
+  more like the last six inches of a dragon's tail. Best of all are the final few
+  days before a story is shipped, when the volume of bugs drops to almost zero, and
+  you realize that even the testers are reaching for things to report. Then, at long
+  last you look in your mailbox and nothing's there! You say hello to the testers
+  in the halls without terror, and there's nothing whatsoever to worry about. Until
+  the next game!
+  <div class="mb-2"></div>
+</ArchiveLayout>
