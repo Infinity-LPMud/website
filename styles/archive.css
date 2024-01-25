@@ -3,3 +3,81 @@
   margin: 0 auto;
   background-color: #c0c0c0;
 }
+
+body {
+  background-color: #6699cc; /* Typical 90s blue color */
+  color: #ffffff; /* White text */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #ff9900; /* Orange header background */
+  padding: 10px;
+  text-align: center;
+}
+
+.content-container {
+  width: 80%;
+  margin: 20px auto;
+  margin-bottom: 4rem;
+  background-color: #ffffff; /* White container background */
+  color: #333333; /* Dark text on white background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Drop shadow */
+  padding: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .content-container {
+    width: 90%;
+  }
+}
+
+footer {
+  background-color: #333333; /* Dark footer background */
+  color: #ffffff; /* White text in footer */
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.content-container table {
+  width: 100%; /* Table takes up 100% of its parent container width */
+  border-collapse: collapse; /* Remove default cell spacing */
+}
+
+.content-container th,
+.content-container td {
+  padding: 12px; /* Add padding to table cells */
+  border: 1px solid #dddddd; /* Add border to separate cells */
+}
+
+/* Additional styles for better readability */
+.content-container th {
+  background-color: #f2f2f2; /* Light gray background for header cells */
+  color: #333333; /* Dark text for header cells */
+}
+
+/* Optional: Add hover effect for better user experience */
+.content-container tr:hover {
+  background-color: #f5f5f5; /* Light background on hover */
+}
+
+.content-container a {
+  color: #0066cc; /* Blue color for links */
+  text-decoration: underline; /* Underline links */
+}
+
+/* Optional: Change link color on hover for better user experience */
+.content-container a:hover {
+  color: #004080; /* Darker blue on hover */
+}
+
+#image-container {
+  text-align: center;
+  margin-top: 50px; /* Adjust the top margin as needed */
+  display: flex;
+  justify-content: center;
+}

@@ -1,12 +1,13 @@
 ---
 import ArchiveLayout from "../../layouts/ArchiveLayout.astro";
+import NinetySixLayout from "../../layouts/NinetySixLayout.astro";
 const breadCrumbs = [
   { href: "/", label: "Home" },
-  { href: "/archive", label: "Archive" },
+  { href: "/archive/main", label: "Archive" },
 ];
 ---
 
-<ArchiveLayout breadCrumbs={breadCrumbs} title="Quest Design">
+<NinetySixLayout breadCrumbs={breadCrumbs} title="Quest Design">
   <div class="italic">
     <p class="text-black">
       Malc: This page is taken from <a
@@ -678,4 +679,4 @@ font-bold"
       </p>
     </ol>
   </d>
-</ArchiveLayout>
+</NinetySixLayout>

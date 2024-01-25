@@ -1,12 +1,13 @@
 ---
 import ArchiveLayout from "../../layouts/ArchiveLayout.astro";
+import NinetySixLayout from "../../layouts/NinetySixLayout.astro";
 const breadCrumbs = [
   { href: "/", label: "Home" },
-  { href: "/archive", label: "Archive" },
+  { href: "/archive/main", label: "Archive" },
 ];
 ---
 
-<ArchiveLayout title="History of MUDs" breadCrumbs={breadCrumbs}>
+<NinetySixLayout title="History of MUDs" breadCrumbs={breadCrumbs}>
   <h2 class="mx-auto text-center text-2xl mb-3">
     Infinity LPMud: A history of MUDs
   </h2>
@@ -128,4 +129,4 @@ const breadCrumbs = [
     "British Legends".
   </p>
   <p class="mb-2 text-xl italic">Richard Bartle</p>
-</ArchiveLayout>
+</NinetySixLayout>

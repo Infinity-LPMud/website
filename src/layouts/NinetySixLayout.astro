@@ -1,0 +1,40 @@
+---
+import "../../styles/archive.css";
+import ArchiveBreadcrumb from "../components/ArchiveBreadcrumb.astro";
+import SEOHead from "../components/SEOHead.astro";
+interface Props {
+  breadCrumbs?: { href: string; label: string }[];
+  title: string;
+}
+const { breadCrumbs, title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <SEOHead title={title} />
+  </head>
+  <body>
+    <header>
+      {
+        breadCrumbs && (
+          <ArchiveBreadcrumb breadCrumbs={breadCrumbs} title={title} />
+        )
+      }<h1>Welcome to The Infinity Archives</h1>
+    </header>
+
+    <img
+      src="/assets/archive/under_construction.gif"
+      alt="Under Construction"
+      style="display: block; margin: 0 auto;"
+    />
+
+    <div class="content-container">
+      <slot />
+    </div>
+
+    <footer>&copy; 1996 Infinity LPMud</footer>
+  </body>
+</html>
