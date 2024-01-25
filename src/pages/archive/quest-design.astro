@@ -7,7 +7,7 @@ const breadCrumbs = [
 ---
 
 <ArchiveLayout breadCrumbs={breadCrumbs} title="Quest Design">
-  <div style="font-style: italic;">
+  <div class="italic">
     <p class="text-black">
       Malc: This page is taken from <a
         href="http://www.lysator.liu.se/mud/questdesign.html"
@@ -258,7 +258,7 @@ const breadCrumbs = [
     </ol>
   </div>
 
-  <div class="mb-4">
+  <d class="mb-4">
     <h2 class="text-xl font-semibold mb-2">2. What makes a good game?</h2>
 
     <ol class="list-decimal pl-6 mb-4">
@@ -342,7 +342,7 @@ const breadCrumbs = [
         usually quite closed off from each other. Usually once one of these
         phases has been left, it cannot be returned to.
       </p>
-      <div style="font-style: italic;">
+      <div class="italic">
         <p class="text-black ml-6 mb-2">
           Macbeth: Well, you haven't much of a choice where the genre is
           concerned, TubMud having wizrule #8 and a generic fantasy setting. All
@@ -366,7 +366,7 @@ const breadCrumbs = [
         simple and easily remembered map layout to prevent players from getting
         lost and giving up.
       </p>
-      <div style="font-style: italic;">
+      <div class="italic">
         <p class="text-black ml-6 mb-2">
           Macbeth: In TubMud, it's essential to have an obvious starting point.
           Quests can be designed with several possible starting points or
@@ -422,13 +422,258 @@ const breadCrumbs = [
         "Hitch-hikers."
       </p>
       <li class="mb-2">Density</li>
+      <p class="text-black ml-6 mb-2">
+        Once upon a time, the sole measure of quality in advertisements for
+        adventure games was the number of rooms. Even quite small programs would
+        have 200 rooms, which meant only minimal room descriptions and simple
+        puzzles which were scattered thinly over the map.
+      </p>
 
-      <li class="mb-2">Rewards</li>
-      <li class="mb-2">Mazes</li>
-      <li class="mb-2">Wrong Guesses</li>
-      <li class="mb-2">The Map</li>
-      <li class="mb-2">The End Game</li>
-      <li class="mb-2">And Finally...</li>
+      <p class="text-black ml-6 mb-2">
+        Nowadays a healthier principle has been adopted: that (barring a few
+        junctions and corridors) there should be something out of the ordinary
+        about every room.
+      </p>
+
+      <p class="text-black ml-6 mb-2">
+        One reason for the quality of the "Infocom" games is that the version 3
+        system has an absolute maximum of 255 objects, which needs to cover
+        rooms, objects and many other things (eg, compass directions, or the
+        spells in "Enchanter" et al). Many "objects" are not portable anyway:
+        walls, tapestries, thrones, control panels, coal-grinding machines and
+        so on.
+      </p>
+
+      <p class="text-black ml-6 mb-2">
+        As a rule of thumb, four objects to one room is about right: this means
+        there will be, say, 50-60 rooms. Of the remaining 200 objects, one can
+        expect 15-20 to be used up by the game's administration (eg, a
+        "darkness" room, 10 compass directions, a player and so on). Another
+        50-75 or so objects will be portable but the largest number, at least
+        100, will be furniture.
+      </p>
+
+      <p class="text-black ml-6 mb-2">
+        So an object limit can be a blessing as well as a curse: it forces the
+        designer to make the game dense. Rooms are too precious to be wasted.
+
+        <div class="italic">
+          Macbeth: Did I ever mention that I hated those (n+1)-rooms quests with
+          nothing in them? Quantos's maze, albeit not an official quest, is
+          probably the worst example. Moreover, you shouldn't make your quest
+          too long. It probably will get too boring after some time.
+        </div>
+        <li class="mb-2">Rewards</li>
+        <p class="text-black ml-6 mb-2">
+          There are two kinds of reward which need to be given to a player in
+          return for solving a puzzle. One is obvious: that the game should
+          advance a little. But the player at the keyboard needs a reward as
+          well, that the game should offer something new to look at. In the old
+          days, when a puzzle was solved, the player simply got a bar of gold
+          and had one less puzzle to solve.
+        </p>
+
+        <p class="text-black ml-6 mb-2">
+          <div class="italic">
+            Macbeth: This is a bit more tricky in TubMud, with all our problems
+            with quests handing out tons of gold and special items. You should
+            think twice before handing out any material rewards. Some experience
+            points would of course be a better idea. But be careful not to
+            unbalance the game. Much better is to offer the player some new
+            rooms and objects to play with, as this is a real incentive. If no
+            new rooms are on offer, at least the "treasure" objects can be made
+            interesting, like the spells in the "Enchanter" trilogy or the cubes
+            in "Spellbreaker".
+          </div>
+        </p>
+
+        <li class="mb-2">Mazes</li>
+        <p class="text-black ml-6 mb-2">
+          Almost every game contains a maze. Nothing nowadays will ever equal
+          the immortal
+        </p>
+
+        <pre
+          class="text-sm">
+          You are in a maze of twisty little passages, all alike.
+      </pre>
+        <p class="text-black ml-6 mb-2">
+          But now we are all jaded. A maze should offer some twist which hasn't
+          been done before (the ones in "Enchanter" and "Sorcerer" being fine
+          examples).
+        </p>
+
+        <p class="text-black ml-6 mb-2">
+          The point is not to make it hard and boring. The standard maze
+          solution is to litter the rooms with objects in order to make the
+          rooms distinguishable. It's easy enough to obstruct this, the thief in
+          "Zork I" being about the wittiest way of doing so. But that only makes
+          a maze tediously difficult.
+        </p>
+
+        <p class="text-black ml-6 mb-2">
+          Instead there should be an elegant quick solution: for instance a
+          guide who needs to be bribed, or fluorescent arrows painted on the
+          floor which can only be seen in darkness (plus a hint about darkness,
+          of course).
+        </p>
+
+        <p class="text-black ml-6 mb-2">
+          Above all, don't design a maze which appears to be a standard
+          impossibly hard one: even if it isn't, a player may lose heart and
+          give up rather than go to the trouble of mapping it.
+        </p>
+
+        <p class="text-black ml-6 mb-2">
+          <div class="italic">
+            Macbeth: YES. Maybe that's a personal quirk of mine, but I resent
+            mapping mazes as part of a quest. This usually (though not always)
+            means that the author was lacking the imagination to come up with
+            something more original. But of course it is perfectly acceptable to
+            send somebody on a wild-goose chase through a maze if he was too
+            stupid to figure out an easier way.
+          </div>
+        </p>
+        <li class="mb-2">Wrong Guesses</li>
+        <p class="text-black ml-6 mb-2">
+          For some puzzles, a perfectly good alternative solution will occur to
+          players. It's good style to code two or more solutions to the same
+          puzzle, if that doesn't upset the rest of the game. But even if it
+          does, at least a game should say something when a good guess is made.
+          (Trying to cross the volcano on the magic carpet in "Spellbreaker" is
+          a case in point.)
+        </p>
+
+        <p class="text-black ml-6 mb-2">
+          One reason why "Zork" held the player's attention so firmly (and why
+          it took about ten times the code size, despite being slightly smaller
+          than the original mainframe Adventure) was that it had a huge stock of
+          usually funny responses to reasonable things which might be tried.
+        </p>
+
+        <p class="text-black ml-6 mb-2 text-xs">
+          My favourite funny response, which I can't resist reprinting here, is:
+          <pre
+            class="text-sm">You are falling towards the ground, wind whipping around you.
+   >east
+   Down seems more likely.     "Spellbreaker"</pre>
+          <p class="text-black ml-6 mb-2">
+            (Though I also recommend trying to take the sea serpent in "Zork
+            II".) This is a good example because it's exactly the sort of boring
+            rule (can't move from the midair position) which most designers
+            usually want to code as fast as possible, and don't write with any
+            imagination.
+          </p>
+          <p class="text-black ml-6 mb-2">
+            Just as some puzzles should have more than one solution, some
+            objects should have more than one purpose. In bad old games, players
+            automatically threw away everything as soon as they'd used them. In
+            better designed games, obviously useful things (like the crowbar and
+            the gloves in "Lurking Horror") should be hung on to by the player
+            throughout.
+          </p>
+          <li class="mb-2">The Map</li>
+          <p class="text-black ml-6 mb-2">
+            To maintain an atmosphere throughout it's vital that the map should
+            be continuous. Adventure games used to have maps like
+          </p>
+          <pre
+            class="text-xs">
+            Glacier
+               |
+          Oriental Room  --  Fire Station
+           (megaphone)        (pot plant)
+               |
+           Cheese Room</pre>
+          <p class="text-black ml-6 mb-2">
+            in which the rooms bore no relation to each other, so that the game
+            had no overall geography at all, and objects were unrelated to the
+            rooms they were in. Much more believable is something like
+          </p>
+          <pre
+            class="text-xs">Snowy Mountainside
+                \  
+             Carved Tunnel
+                   |
+             Oriental Room  -- Jade Passage -- Fire Dragon
+                (buddha)       (bonsai tree)      Room
+                   |
+             Blossom Room
+        </pre>
+          <p class="text-black ml-6 mb-2">
+            Try to have some large-scale geography too: the mountainside should
+            extend across the map in both directions. If there is a stream
+            passing through a given location, what happens to it? And so on. In
+            designing a map, it adds to the interest to make a few connections
+            in the rarer compass directions (NE, NW, SE, SW) to prevent the
+            player from a feeling that the game has a square grid. Also, it's
+            nice to have a few (possibly long) loops which can be walked around,
+            to prevent endless retracing of steps.
+          </p>
+
+          <p class="text-black ml-6 mb-2">
+            If the map is very large, or if a good deal of to-and-froing is
+            called for, there should be some rapid means of moving across it,
+            such as the magic words in Adventure, or the cubes in
+            "Spellbreaker".
+          </p>
+          <p
+            class="text-black ml-6 mb-2 text-lg Macbeth: This is VERY important in a MUD. Try to maintain consistency.
+font-bold"
+          >
+            Macbeth: This is VERY important in a MUD. Try to maintain
+            consistency.
+          </p>
+
+          <li class="mb-2">The End Game</li>
+          <p class="text-black ml-6 mb-2">
+            Some end games are small ("Lurking Horror", or "Sorcerer" for
+            instance), others large (the master game of the mainframe
+            Adventure). Nonetheless almost all games have one.
+          </p>
+
+          <p class="text-black ml-6 mb-2">
+            End games serve two purposes. Firstly they give the player a sense
+            of being near to success, and can be used to culminate the plot, to
+            reveal the game's secrets. This is obvious enough. But secondly they
+            also serve to stop the final stage of the game from being too hard.
+          </p>
+
+          <p class="text-black ml-6 mb-2">
+            As a designer, you don't usually want the last step to be too
+            difficult; you want to give the player the satisfaction of
+            finishing, as a reward for having got through the game. (But of
+            course you want to make him work for it.) An end game helps, because
+            it narrows the game, so that only a few rooms and objects are
+            accessible.
+          </p>
+
+          <p class="text-black ml-6 mb-2">
+            The most annoying thing is requiring the player to have brought a
+            few otherwise useless objects with him. The player should not be
+            thinking that the reason for being stuck on the master game is that
+            something very obscure should have been done 500 turns before.
+          </p>
+          <li class="mb-2">And Finally...</li>
+          <p class="text-black ml-6 mb-2">
+            Finally, the winner gets some last message (which, like the opening
+            message, should have something amusing in it and should not be too
+            long). That needn't quite be all, though. In its final incarnations
+            (alas, not the one included in Lost Treasures), "Zork I" offered
+            winners access to the hints system at the RESTART, RESTORE or QUIT
+            prompt.
+          </p>
+
+          <p class="text-black ml-6 mb-2 italic">
+            Macbeth: Of course, this is quite different in TubMud. You'll have
+            to arrange for a quest reward and guide the player back to a place
+            which has a connection to the rest of the MUD. There may even be
+            more than just a message - use your imagination. In general, a good
+            quest doesn't even need to deal out a huge amount of rewards -
+            playing it will have been enough of a reward.
+          </p>
+        </p>
+      </p>
     </ol>
-  </div>
+  </d>
 </ArchiveLayout>
