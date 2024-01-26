@@ -5,8 +5,13 @@ import SEOHead from "../components/SEOHead.astro";
 interface Props {
   breadCrumbs?: { href: string; label: string }[];
   title: string;
+  noBreadCrumbs?: boolean;
 }
-const { breadCrumbs, title } = Astro.props;
+const { breadCrumbs: _breadcrumbs = [], title, noBreadCrumbs } = Astro.props;
+const breadCrumbs = [
+  { href: "/archive/main", label: "Archive" },
+  ..._breadcrumbs,
+];
 ---
 
 <!doctype html>
@@ -19,7 +24,7 @@ const { breadCrumbs, title } = Astro.props;
   <body>
     <header>
       {
-        breadCrumbs && (
+        !noBreadCrumbs && (
           <ArchiveBreadcrumb breadCrumbs={breadCrumbs} title={title} />
         )
       }
