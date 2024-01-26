@@ -1,7 +1,5 @@
 # Infinity LPMud Website
 
-[![Infinity LPMud](https://infinitymud.net/images/infinity-logo.png)](https://infinitymud.net/)
-
 This repository hosts the official website for Infinity LPMud, a MUD game filled with endless adventures and exploration.
 
 ## Overview
@@ -14,7 +12,7 @@ Infinity LPMud offers:
 
 ## Live Site
 
-Visit the live site at [Infinity LPMud](https://infinitymud.net/) to experience the adventure firsthand!
+Visit the live site at [Infinity LPMud](https://infinity-website-beta.vercel.app/) to experience the adventure firsthand!
 
 ## Technologies Used
 
@@ -31,8 +29,8 @@ To contribute or set up the project locally, follow these steps:
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/your-username/infinity-lpmud-website.git
-   cd infinity-lpmud-website
+   git clone https://github.com/SteveGiralt/Infinity-Website.git
+   cd infinity-website
    ```
 
 2. **Install Dependencies:**
