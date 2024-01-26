@@ -27,7 +27,20 @@ const { title } = Astro.props;
       href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap"
       rel="stylesheet"
     />
-
+    <link
+      rel="preload"
+      fetchpriority="high"
+      as="image"
+      href="/assets/paper-bg2.webp"
+      type="image/webp"
+    />
+    <link
+      rel="preload"
+      fetchpriority="high"
+      as="image"
+      href="/assets/nav-bg.webp"
+      type="image/webp"
+    />
     <SEOHead title={title} />
   </head>
   <body>

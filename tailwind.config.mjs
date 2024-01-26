@@ -17,8 +17,8 @@ export default {
       },
       backgroundImage: {
         "paper-bg":
-          'linear-gradient(rgba(200, 200, 200, .5), rgba(200, 200, 200, .5)), url("/assets/paper-bg2.jpg")',
-        nav: 'linear-gradient(rgba(200, 200, 200, .5), rgba(200, 200, 200, .5)), url("/assets/nav-bg.jpg")',
+          'linear-gradient(rgba(200, 200, 200, .5), rgba(200, 200, 200, .5)), url("/assets/paper-bg2.webp")',
+        nav: 'linear-gradient(rgba(200, 200, 200, .5), rgba(200, 200, 200, .5)), url("/assets/nav-bg.webp")',
       },
     },
   },
