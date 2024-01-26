@@ -4,6 +4,11 @@ import PageSection from "../components/PageSection.astro";
 import PageHeader from "../components/PageHeader.astro";
 import { Image, Picture } from "astro:assets";
 import greetings3 from "../assets/greetings3.png";
+import orcBattle from "../assets/orc-battle.png";
+import quests from "../assets/quests.png";
+import dragonBattle from "../assets/dragon-battle.png";
+import clientUse from "../assets/client-use.png";
+import cachet from "../assets/cachet.png";
 ---
 
 <InfinityMainLayout>
@@ -26,10 +31,7 @@ import greetings3 from "../assets/greetings3.png";
     >.
   </PageSection>
 
-  <PageSection
-    title="Quests"
-    img={{ src: "/assets/quests.png", alt: "Quest Image" }}
-  >
+  <PageSection title="Quests" img={{ src: quests, alt: "Quest Image" }}>
     Embark on a captivating journey within Infinity, where quests transcend the
     ordinary and offer a range of difficulties to challenge adventurers of all
     levels. Our quests are meticulously crafted, each providing players with a
@@ -45,10 +47,7 @@ import greetings3 from "../assets/greetings3.png";
     beyond the conventional.
   </PageSection>
 
-  <PageSection
-    title="Combat"
-    img={{ src: "/assets/orc-battle.png", alt: "Orc Image" }}
-  >
+  <PageSection title="Combat" img={{ src: orcBattle, alt: "Orc Image" }}>
     Prepare to engage in thrilling battles within, where combat and magic
     intertwine to create a dynamic and immersive experience. Whether you seek
     legendary weapons, enchanted artifacts, or mystical relics, the world of
@@ -71,10 +70,7 @@ import greetings3 from "../assets/greetings3.png";
     >.
   </PageSection>
 
-  <PageSection
-    title="Guilds"
-    img={{ src: "/assets/dragon-battle.png", alt: "Dragon Image" }}
-  >
+  <PageSection title="Guilds" img={{ src: dragonBattle, alt: "Dragon Image" }}>
     Dive into the rich tapestry of Infinity MUD's guild system, where players
     are invited to align themselves with unique factions, each offering a
     distinct playstyle and set of skills. Choose to become a master of the
@@ -93,7 +89,7 @@ import greetings3 from "../assets/greetings3.png";
 
   <PageSection
     title="How To Play"
-    img={{ src: "/assets/client-use.png", alt: "User Playing Infinity" }}
+    img={{ src: clientUse, alt: "User Playing Infinity" }}
   >
     Experience the seamless entry into the realms of Infinity MUD with our
     user-friendly <a href="https://infinitymud.net/play/">
@@ -124,7 +120,14 @@ import greetings3 from "../assets/greetings3.png";
   </PageSection>
 
   <!-- This a red wine cachet ... but shh ! -->
-  <p class="cachet"><img src="/assets/cachet.png" /></p>
+  <p class="cachet">
+    <Picture
+      src="/assets/cachet.png"
+      height={250}
+      width={210}
+      alt="Wax Seal on Signature"
+    />
+  </p>
   <div id="signature">
     Malc<br />The Banned Merchant
   </div>
