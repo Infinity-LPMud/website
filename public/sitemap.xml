@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://infinity-website-beta.vercel.app/</loc>
+  <lastmod>2024-01-26T16:33:41+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://infinity-website-beta.vercel.app/faq</loc>
+  <lastmod>2024-01-26T16:33:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://infinity-website-beta.vercel.app/history</loc>
+  <lastmod>2024-01-26T16:33:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://infinity-website-beta.vercel.app/gameplay</loc>
+  <lastmod>2024-01-26T16:33:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://infinity-website-beta.vercel.app/guilds</loc>
+  <lastmod>2024-01-26T16:33:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://infinity-website-beta.vercel.app/archive</loc>
+  <lastmod>2024-01-26T16:33:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://infinity-website-beta.vercel.app/lore</loc>
+  <lastmod>2024-01-26T16:33:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://infinity-website-beta.vercel.app/qualstar</loc>
+  <lastmod>2024-01-26T16:33:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://infinity-website-beta.vercel.app/clients</loc>
+  <lastmod>2024-01-26T16:33:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://infinity-website-beta.vercel.app/archive/main</loc>
+  <lastmod>2024-01-26T16:33:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://infinity-website-beta.vercel.app/archive/quest-design</loc>
+  <lastmod>2024-01-26T16:33:41+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://infinity-website-beta.vercel.app/archive/history-of-muds</loc>
+  <lastmod>2024-01-26T16:33:41+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://infinity-website-beta.vercel.app/archive/testing</loc>
+  <lastmod>2024-01-26T16:33:41+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://infinity-website-beta.vercel.app/archive/guestbook</loc>
+  <lastmod>2024-01-26T16:33:41+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+
+
+</urlset>
