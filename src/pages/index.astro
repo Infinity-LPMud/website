@@ -2,14 +2,17 @@
 import InfinityMainLayout from "../layouts/InfinityMainLayout.astro";
 import PageSection from "../components/PageSection.astro";
 import PageHeader from "../components/PageHeader.astro";
+import { Image, Picture } from "astro:assets";
+import greetings3 from "../assets/greetings3.png";
 ---
 
 <InfinityMainLayout>
-  <img src="/assets/greetings3.png" class="mx-auto z-10 w-full md:w-3/5 mt-6" alt="Infinity LPMud hero image" />  
+  <!-- <img src="/assets/greetings3.png" class="mx-auto z-10 w-full md:w-3/5 mt-6" alt="Infinity LPMud hero image" />   -->
+  <div class="mx-auto z-10 w-full md:w-3/5 mt-6">
+    <Picture src={greetings3} alt="Infinity LPMud hero image" />
+  </div>
 
-  <PageHeader
-    title="Greetings, Brave Adventurer"  
-  >
+  <PageHeader title="Greetings, Brave Adventurer">
     Are you ready for a journey beyond the ordinary? An adventure that
     transcends the realms of imagination and challenges the limits of your
     creativity? Look no further, for Infinity MUD awaits you!
