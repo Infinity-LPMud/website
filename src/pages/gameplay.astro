@@ -2,6 +2,9 @@
 import InfinityMainLayout from "../layouts/InfinityMainLayout.astro";
 import PageSection from "../components/PageSection.astro";
 import PageHeader from "../components/PageHeader.astro";
+import players from "../assets/players.png";
+import wizhood from "../assets/wizhood.png";
+import beyond from "../assets/beyond-advancement.png";
 ---
 
 <InfinityMainLayout title="Gameplay">
@@ -16,6 +19,7 @@ import PageHeader from "../components/PageHeader.astro";
   <PageSection
     title="Players"
     img={{ src: "/assets/players.png", alt: "Infinity Players" }}
+    loading="eager"
   >
     In the vast and immersive world of Infinity, players embody a diverse
     community of individuals characterized by their sharp intellect and
@@ -35,7 +39,7 @@ import PageHeader from "../components/PageHeader.astro";
   <PageSection
     title="Advancement"
     img={{
-      src: "/assets/wizhood.png",
+      src: wizhood,
       alt: "Young man being promoted to Wizard",
     }}
   >
@@ -71,7 +75,7 @@ import PageHeader from "../components/PageHeader.astro";
   <PageSection
     title="Beyond Levels"
     img={{
-      src: "/assets/beyond-advancement.png",
+      src: beyond,
       alt: "Decide on Your Advancement",
     }}
   >

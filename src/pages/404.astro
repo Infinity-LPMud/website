@@ -1,13 +1,22 @@
 ---
 import PageSection from "../components/PageSection.astro";
 import InfinityMainLayout from "../layouts/InfinityMainLayout.astro";
+import PageNotFound from "../assets/404.png";
+import { Picture } from "astro:assets";
+import PageHeader from "../components/PageHeader.astro";
 ---
 
 <InfinityMainLayout title="404">
   <div class="flex flex-col items-center">
     <div class="text-8xl font-bold mb-8">404</div>
     <div class="text-2xl mt-4">Page Not Found</div>
-    <img src="/assets/404.png" />
+    <!-- <img src="/assets/404.png" /> -->
+    <Picture
+      src={PageNotFound}
+      alt="404 Page Not Found"
+      loading="eager"
+      class="text-center"
+    />
   </div>
 
   <PageSection title="Lost in the Enchanted Realm">

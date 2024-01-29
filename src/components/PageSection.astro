@@ -7,8 +7,9 @@ interface Props {
     src: any;
     alt: string;
   };
+  loading?: "eager" | "lazy";
 }
-const { title, img } = Astro.props;
+const { title, img, loading = "lazy" } = Astro.props;
 const sizeProps =
   typeof img?.src === "string" ? { height: 500, width: 500 } : {};
 ---
@@ -17,7 +18,13 @@ const sizeProps =
 {
   img && (
     <div class="mb-1 w-full">
-      <Picture src={img.src} alt={img.alt} class="mx-auto" {...sizeProps} />
+      <Picture
+        src={img.src}
+        alt={img.alt}
+        class="mx-auto"
+        {...sizeProps}
+        loading={loading}
+      />
     </div>
   )
 }
