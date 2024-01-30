@@ -1,5 +1,4 @@
 import { defineConfig } from "astro/config";
-import react from "@astrojs/react";
 
 import tailwind from "@astrojs/tailwind";
 
@@ -7,6 +6,6 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   // Enable React to support React JSX components.
 
-  integrations: [react(), tailwind()],
+  integrations: [tailwind()],
   site: "https://infinity-website-beta.vercel.app/",
 });

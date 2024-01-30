@@ -50,9 +50,49 @@ const { title } = Astro.props;
         <slot />
       </div>
     </main>
-    <script
+    <!-- <script
       is:inline
       src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
-      defer></script>
+      defer></script> -->
+    <script>
+      const toggleButton = document.querySelector<HTMLButtonElement>(
+        '[data-collapse-toggle="navbar-cta"]'
+      );
+
+      if (toggleButton) {
+        toggleButton.addEventListener("click", () => {
+          const targetId = toggleButton.dataset.collapseToggle as string;
+          const targetElement = document.getElementById(
+            targetId
+          ) as HTMLElement;
+
+          if (targetElement) {
+            const isHidden = targetElement.classList.contains("hidden");
+            targetElement.classList.toggle("hidden");
+            toggleButton.setAttribute(
+              "aria-expanded",
+              isHidden ? "false" : "true"
+            );
+          }
+        });
+      }
+
+      function toggleHamburgerAriaHidden() {
+        const hamburgerElement = document.getElementById("hamburger");
+
+        if (hamburgerElement instanceof SVGElement) {
+          const hamburgerSvg = hamburgerElement as SVGElement;
+          hamburgerSvg.setAttribute(
+            "aria-hidden",
+            window.innerWidth < 768 ? "false" : "true"
+          );
+        } else {
+          console.error('Element with ID "hamburger" is not an SVG element.');
+        }
+      }
+
+      window.addEventListener("resize", toggleHamburgerAriaHidden);
+      toggleHamburgerAriaHidden(); // Call immediately to set initial state
+    </script>
   </body>
 </html>
