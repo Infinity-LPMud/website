@@ -53,21 +53,16 @@ jobs:
           # A file, directory or wildcard pattern that describes what to upload
           path: dist/
         if: github.event_name != 'pull_request'
-      - name: Test SSH Connection
-        run: |
-          ssh -i ${{ secrets.KEY }} -p ${{ secrets.PORT }} ${{ secrets.USERNAME }}@${{ secrets.HOST }} "echo Connection successful"
-        env:
-          KEY: ${{ secrets.KEY }}
+      - name: Deploy to Web Server
+        uses: appleboy/scp-action@v0.1.6
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          port: ${{ secrets.PORT }}
+          key: ${{ secrets.KEY }}
+          source: dist/
+          # target: /home/infinity-www/html/
+          target: /tmp/website-test/
+          strip_components: 3
+          overwrite: true
         if: github.event_name != 'pull_request'
-    # - name: Deploy to Web Server
-    #   uses: appleboy/scp-action@v0.1.6
-    #   with:
-    #     host: ${{ secrets.HOST }}
-    #     username: ${{ secrets.USERNAME }}
-    #     port: ${{ secrets.PORT }}
-    #     key: ${{ secrets.KEY }}
-    #     source: dist/
-    #     target: /home/infinity-www/html/
-    #     strip_components: 3
-    #     overwrite: true
-    #   if: github.event_name != 'pull_request'
