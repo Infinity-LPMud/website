@@ -1,0 +1,23 @@
+# This workflow triggers the build_and_deploy.yml action
+
+name: Trigger Build and Deploy
+
+on:
+  push:
+    branches: ["prod"]
+  pull_request:
+    branches: ["prod"]
+
+jobs:
+  trigger-build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Trigger build and deploy
+        run: |
+          gh workflow run build_and_deploy.yml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
