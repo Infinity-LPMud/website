@@ -1,0 +1,72 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: Infinity Website
+
+on:
+  push:
+    branches: ["prod"]
+  pull_request:
+    branches: ["prod"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Cache node modules
+        id: cache-npm
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules-client
+        with:
+          # npm cache files are stored in `~/.npm` on Linux/macOS
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+
+      - run: npm ci
+      - run: npm run build
+      # - run: npm test
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v4.0.0
+        with:
+          # Artifact name
+          name: infinity-website
+          # A file, directory or wildcard pattern that describes what to upload
+          path: dist/
+        if: github.event_name != 'pull_request'
+      - name: Test SSH Connection
+        run: |
+          ssh -i ${{ secrets.KEY }} -p ${{ secrets.PORT }} ${{ secrets.USERNAME }}@${{ secrets.HOST }} "echo Connection successful"
+        env:
+          KEY: ${{ secrets.KEY }}
+        if: github.event_name != 'pull_request'
+    # - name: Deploy to Web Server
+    #   uses: appleboy/scp-action@v0.1.6
+    #   with:
+    #     host: ${{ secrets.HOST }}
+    #     username: ${{ secrets.USERNAME }}
+    #     port: ${{ secrets.PORT }}
+    #     key: ${{ secrets.KEY }}
+    #     source: dist/
+    #     target: /home/infinity-www/html/
+    #     strip_components: 3
+    #     overwrite: true
+    #   if: github.event_name != 'pull_request'
