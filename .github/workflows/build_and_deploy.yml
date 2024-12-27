@@ -62,7 +62,7 @@ jobs:
           key: ${{ secrets.KEY }}
           source: dist/*
           # target: /home/infinity-www/html/
-          target: /tmp/website-test4/
+          target: /tmp/website-test4
           # strip_components: 2
           overwrite: true
         if: github.event_name != 'pull_request'
