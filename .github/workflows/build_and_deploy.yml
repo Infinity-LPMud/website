@@ -52,6 +52,7 @@ jobs:
           # A file, directory or wildcard pattern that describes what to upload
           path: dist/
         if: github.event_name != 'pull_request'
+      - run: ls -R dist/
       - name: Deploy to Web Server
         uses: appleboy/scp-action@v0.1.6
         with:
@@ -62,6 +63,6 @@ jobs:
           source: dist/
           # target: /home/infinity-www/html/
           target: /tmp/website-test/
-          strip_components: 2
+          # strip_components: 2
           overwrite: true
         if: github.event_name != 'pull_request'
