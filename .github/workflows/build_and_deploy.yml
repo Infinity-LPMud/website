@@ -60,9 +60,9 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
           key: ${{ secrets.KEY }}
-          source: dist/*
+          source: dist/
           # target: /home/infinity-www/html/
-          target: /tmp/website-test4
+          target: /tmp/website-test5
           # strip_components: 2
           overwrite: true
         if: github.event_name != 'pull_request'
