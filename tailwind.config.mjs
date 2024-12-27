@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        backgroundColor: "#333", // For now
+        backgroundColor: "#d1c1af",
         navText: "#7f3300;",
         logo: "#dec09a",
       },
