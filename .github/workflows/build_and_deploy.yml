@@ -62,6 +62,6 @@ jobs:
           source: dist/
           # target: /home/infinity-www/html/
           target: /tmp/website-test/
-          strip_components: 3
+          strip_components: 2
           overwrite: true
         if: github.event_name != 'pull_request'
