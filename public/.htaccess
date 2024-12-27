@@ -1,0 +1,37 @@
+# Force HTTPS
+
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.\*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Handle routing for Astro SPA
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.\*)$ /index.html [L,QSA]
+
+# Set default index page
+
+DirectoryIndex index.html
+
+# Prevent directory listing
+
+Options -Indexes
+
+# Enable following symlinks
+
+Options +FollowSymLinks
+
+# Cache static assets
+
+<FilesMatch "\.(jpg|jpeg|png|gif|ico|css|js)$">
+Header set Cache-Control "max-age=31536000, public"
+</FilesMatch>
+
+# Protect .htaccess file
+
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>
