@@ -50,7 +50,7 @@ jobs:
           # Artifact name
           name: infinity-website
           # A file, directory or wildcard pattern that describes what to upload
-          path: dist/
+          path: dist/*
         if: github.event_name != 'pull_request'
       - run: ls -R dist/
       - name: Deploy to Web Server
