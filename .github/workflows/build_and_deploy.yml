@@ -60,7 +60,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
           key: ${{ secrets.KEY }}
-          source: dist/
+          source: dist/*
           # target: /home/infinity-www/html/
           target: /tmp/website-test3/
           # strip_components: 2
