@@ -12,7 +12,7 @@ Infinity LPMud offers:
 
 ## Live Site
 
-Visit the live site at [Infinity LPMud](https://infinity-website-beta.vercel.app/) to experience the adventure firsthand!
+Visit the live site at [Infinity LPMud](https://www.infinitymud.com/) to experience the adventure firsthand!
 
 ## Technologies Used
 
