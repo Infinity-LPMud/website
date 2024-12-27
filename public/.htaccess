@@ -1,6 +1,14 @@
-# Force HTTPS
+# Force HTTPS and redirect .net to .com
 
 RewriteEngine On
+
+# First redirect .net to .com
+
+RewriteCond %{HTTP_HOST} ^(www\.)?infinitymud\.net$ [NC]
+RewriteRule ^(.\*)$ https://infinitymud.com/$1 [L,R=301]
+
+# Then force HTTPS for all remaining traffic
+
 RewriteCond %{HTTPS} off
 RewriteCond %{HTTP:X-Forwarded-Proto} !https
 RewriteRule ^(.\*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
