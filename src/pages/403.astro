@@ -1,0 +1,53 @@
+---
+import { Picture } from "astro:assets";
+import ForbiddenImage from "../assets/403.png";
+import PageSection from "../components/PageSection.astro";
+import InfinityMainLayout from "../layouts/InfinityMainLayout.astro";
+---
+
+<InfinityMainLayout title="403">
+  <div class="flex flex-col items-center">
+    <div class="text-8xl font-bold mb-8">403</div>
+    <div class="text-2xl mt-4">Access Forbidden</div>
+    <Picture
+      src={ForbiddenImage}
+      alt="403 Forbidden"
+      loading="eager"
+      class="text-center"
+    />
+  </div>
+
+  <PageSection title="A Barrier to the Realm">
+    It seems you've approached a forbidden door, one that the guardians of this
+    realm have sealed. The path you seek lies beyond the reach of those
+    uninvited.
+  </PageSection>
+
+  <PageSection title="Why This Gate is Closed">
+    Perhaps the ancient wards of protection have been placed around this portal
+    to prevent unauthorized access. Or, the spirits of the realm have deemed you
+    unworthy to cross its threshold at this moment.
+  </PageSection>
+
+  <PageSection title="Do Not Worry, Brave Soul!">
+    While this gate may be closed for now, the realm offers many paths for the
+    worthy. Retrace your steps, seek guidance, or try a different route. The
+    path to knowledge is always available to those with the courage to seek it.
+  </PageSection>
+
+  <PageSection title="A Word from the Elders:">
+    "Not every door is meant to open to all. Sometimes, it is through patience
+    and persistence that one finds the key to hidden knowledge."
+  </PageSection>
+
+  <PageSection title="The Fellowship of Developers">
+    If you believe this gate should not be closed to you, send a raven (or an
+    email) to the guardians of the realm. They may hold the key to unlocking
+    this path for you.
+  </PageSection>
+
+  <PageSection title="In the Meantime...">
+    While the gates are closed, feel free to visit our <a href="/">homepage</a> and
+    explore the other corners of our mystical world. The adventure never truly ends.
+  </PageSection>
+</InfinityMainLayout>

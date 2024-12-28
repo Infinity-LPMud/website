@@ -43,3 +43,8 @@ Header set Cache-Control "max-age=31536000, public"
 Order allow,deny
 Deny from all
 </Files>
+
+# Redirect 404 (Not Found)
+
+ErrorDocument 404 /404.html
+ErrorDocument 403 /403.html
