@@ -1,0 +1,29 @@
+---
+import PageHeader from "../components/PageHeader.astro";
+import InfinityMainLayout from "../layouts/InfinityMainLayout.astro";
+import topPlayers from "../assets/top-players.png";
+---
+
+<InfinityMainLayout title="Top Players">
+  <PageHeader
+    title="Infinity's Top Players"
+    img={{ src: topPlayers, alt: "Infinity's Top Players" }}
+  >
+    These are Infinity's current top players. Players are ranked by a variety of
+    factors including experience points, level, and wizard quests solved.
+  </PageHeader>
+
+  <div
+    id="player-list"
+    class="grid sm:grid-cols-4 grid-cols-2 sm:gap-4 p-4 list-none text-lg text-[#7f3300] font-fell"
+  >
+  </div>
+
+  <script type="module">
+    import { renderTopPlayers } from "/js/topPlayers.js";
+
+    document.addEventListener("DOMContentLoaded", function () {
+      renderTopPlayers("/data/SORT_LEVEL.json", "player-list");
+    });
+  </script>
+</InfinityMainLayout>

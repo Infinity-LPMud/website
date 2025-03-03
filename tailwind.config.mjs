@@ -14,6 +14,7 @@ export default {
       fontFamily: {
         medieval: ["MedievalSharp", "cursive"],
         caveat: ["Caveat", "cursive"],
+        fell: ["'IM Fell English'", "serif"],
       },
       backgroundImage: {
         "paper-bg":
