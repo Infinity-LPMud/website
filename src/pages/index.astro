@@ -9,6 +9,7 @@ import quests from "../assets/quests.png";
 import PageHeader from "../components/PageHeader.astro";
 import PageSection from "../components/PageSection.astro";
 import InfinityMainLayout from "../layouts/InfinityMainLayout.astro";
+import FrontPageTopPlayer from "../components/FrontPageTopPlayer.astro";
 ---
 
 <InfinityMainLayout>
@@ -36,6 +37,8 @@ import InfinityMainLayout from "../layouts/InfinityMainLayout.astro";
       >Start Your Adventure Now</a
     >.
   </PageSection>
+
+  <FrontPageTopPlayer client:visible />
 
   <PageSection title="Quests" img={{ src: quests, alt: "Quest Image" }}>
     Embark on a captivating journey within Infinity, where quests transcend the

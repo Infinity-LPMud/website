@@ -1,0 +1,20 @@
+---
+import PageSection from "./PageSection.astro";
+---
+
+<PageSection title="Top Player">
+  Congratulations to <span id="topPlayer" class="text-2xl font-bold"></span>,
+  Infinity's current top player! Infinity's top players are ranked by a variety
+  of factors including experience points, level, and wizard quests solved. To
+  see the full list of top players, visit
+  <a href="/top-players" style="font-weight:bold">Infinity's Top Players</a>.
+  The number one spot is a coveted position, but can change at any time.
+</PageSection>
+
+<script type="module">
+  import { renderTopPlayer } from "/js/topPlayers.js";
+
+  document.addEventListener("DOMContentLoaded", function () {
+    renderTopPlayer("/data/SORT_LEVEL.json", "topPlayer");
+  });
+</script>
