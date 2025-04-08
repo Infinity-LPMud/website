@@ -7,23 +7,21 @@ export function renderTopPlayers(dataUrl, containerId) {
 
       container.innerHTML = ""; // Clear loading text
 
-      const ul = document.createElement("ul");
-      ul.className = "p-4 bg-gray-100 rounded-lg shadow";
-
       players.forEach((player) => {
         if (!player.Name) return;
-        const li = document.createElement("li");
-        li.className = "w-full p-4 rounded-lg shadow text-justify";
-        li.textContent = `${player.Name} (${player.Level})`;
-        container.appendChild(li);
+        const div = document.createElement("div");
+        div.className = "p-4 rounded-lg   text-justify";
+        div.textContent = `${player.Name} (${player.Level})`;
+        container.appendChild(div);
       });
-      if (players.length % 2 > 0) {
-        const li = document.createElement("li");
-        li.className = "w-full p-4 rounded-lg shadow text-justify";
-        li.textContent = " ";
-        container.appendChild(li);
+
+      // Padding cell if needed
+      if (players.length % 2 !== 0) {
+        const div = document.createElement("div");
+        div.className = "p-4 invisible";
+        div.textContent = " ";
+        container.appendChild(div);
       }
-      container.appendChild(ul);
     })
     .catch((error) => {
       console.error("Failed to load player data:", error);
