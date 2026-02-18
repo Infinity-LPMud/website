@@ -10,20 +10,22 @@ interface Props {
 const { title, img } = Astro.props;
 ---
 
-{title && <h1 class="header-style page-header">{title}</h1>}
-{
-  img && (
-    <div class="mx-auto h-96 w-96 mb-1">
-      <Image
-        src={img.src}
-        alt={img.alt}
-        height={500}
-        width={500}
-        loading="eager"
-      />
-    </div>
-  )
-}
-<p class="text-xl">
-  <slot />
-</p>
+<div class="reveal">
+  {title && <h1 class="header-style page-header">{title}</h1>}
+  {
+    img && (
+      <div class="mx-auto h-96 w-96 mb-1">
+        <Image
+          src={img.src}
+          alt={img.alt}
+          height={500}
+          width={500}
+          loading="eager"
+        />
+      </div>
+    )
+  }
+  <p class="text-xl">
+    <slot />
+  </p>
+</div>

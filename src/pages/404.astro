@@ -6,16 +6,22 @@ import InfinityMainLayout from "../layouts/InfinityMainLayout.astro";
 ---
 
 <InfinityMainLayout title="404">
-  <div class="flex flex-col items-center">
-    <div class="text-8xl font-bold mb-8">404</div>
-    <div class="text-2xl mt-4">Page Not Found</div>
-    <!-- <img src="/assets/404.png" /> -->
+  <div class="flex flex-col items-center animate-fade-in">
+    <div class="text-8xl font-bold mb-4 font-medieval text-[#d4a24e]" style="text-shadow: 0 0 30px rgba(212,162,78,0.4);">404</div>
+    <div class="text-2xl mt-2 font-fell text-[#c8b89a]">Page Not Found</div>
     <Picture
       src={PageNotFound}
       alt="404 Page Not Found"
       loading="eager"
-      class="text-center"
+      class="text-center mt-4"
     />
+  </div>
+
+  <!-- Terminal style error -->
+  <div class="font-mono text-sm max-w-md mx-auto bg-[rgba(0,0,0,0.4)] border border-[rgba(212,162,78,0.2)] rounded p-4 my-8">
+    <div class="text-[#c44]">ERROR: Scroll of Navigation - corrupted</div>
+    <div class="text-[#8a7a6a] mt-1">The path you seek has been lost to the void.</div>
+    <div class="text-[#d4a24e] mt-1">&gt; <a href="/" class="no-underline hover:underline">return to town</a></div>
   </div>
 
   <PageSection title="Lost in the Enchanted Realm">

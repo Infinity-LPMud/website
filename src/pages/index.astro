@@ -13,22 +13,44 @@ import FrontPageTopPlayer from "../components/FrontPageTopPlayer.astro";
 ---
 
 <InfinityMainLayout>
-  <!-- <img src="/assets/greetings3.png" class="mx-auto z-10 w-full md:w-3/5 mt-6" alt="Infinity LPMud hero image" />   -->
-  <div class="mx-auto z-10 w-full md:w-3/5 mt-6">
-    <Picture
-      src={greetings3}
-      alt="Infinity LPMud hero image"
-      loading="eager"
-      height={500}
-      width={500}
-    />
+  <!-- Hero Section -->
+  <div class="text-center mb-4">
+    <div class="mx-auto z-10 w-full md:w-3/5 mt-6 animate-fade-in">
+      <Picture
+        src={greetings3}
+        alt="Infinity LPMud hero image"
+        loading="eager"
+        height={500}
+        width={500}
+      />
+    </div>
+
+    <h1 class="header-style page-header" style="animation: slide-up 0.8s ease-out 0.2s both;">Greetings, Brave Adventurer</h1>
+
+    <p class="text-xl max-w-2xl mx-auto" style="animation: slide-up 0.8s ease-out 0.4s both;">
+      Are you ready for a journey beyond the ordinary? An adventure that
+      transcends the realms of imagination and challenges the limits of your
+      creativity? Look no further, for Infinity MUD awaits you!
+    </p>
+
+    <!-- Terminal-style prompt -->
+    <div class="mt-8 mb-4 font-mono text-sm md:text-base text-left max-w-md mx-auto bg-[rgba(0,0,0,0.4)] border border-[rgba(212,162,78,0.2)] rounded p-4" style="animation: slide-up 0.8s ease-out 0.6s both;">
+      <div class="text-[#8a7a6a]">$ telnet infinitymud.com 4242</div>
+      <div class="text-[#4a9a4a] mt-1">Connected to Infinity LPMud.</div>
+      <div class="text-[#c8b89a] mt-1">Welcome, adventurer. Your quest begins now.</div>
+      <div class="text-[#d4a24e] mt-1 animate-flicker">&gt; _</div>
+    </div>
+
+    <div style="animation: slide-up 0.8s ease-out 0.8s both;">
+      <a href="https://infinitymud.com/play" class="play-btn text-lg" target="_blank">
+        Start Your Adventure
+      </a>
+    </div>
   </div>
 
-  <PageHeader title="Greetings, Brave Adventurer">
-    Are you ready for a journey beyond the ordinary? An adventure that
-    transcends the realms of imagination and challenges the limits of your
-    creativity? Look no further, for Infinity MUD awaits you!
-  </PageHeader>
+  <div class="ornate-divider" aria-hidden="true">
+    <span class="text-[#d4a24e] text-xs tracking-[0.3em] font-medieval">INFINITY</span>
+  </div>
 
   <PageSection>
     Infinity is a free, multi-player, text-based adventure game full of
@@ -126,6 +148,10 @@ import FrontPageTopPlayer from "../components/FrontPageTopPlayer.astro";
     > port <code>4242</code>
   </PageSection>
 
+  <div class="ornate-divider" aria-hidden="true">
+    <span class="text-[#d4a24e] text-xs tracking-[0.3em] font-medieval">FINIS</span>
+  </div>
+
   <PageSection title="Are you ready?">
     Redefine your idea of gaming... Your destiny awaits in Infinity MUD.
   </PageSection>
@@ -141,5 +167,3 @@ import FrontPageTopPlayer from "../components/FrontPageTopPlayer.astro";
   </p>
   <div id="signature">Malc, the High Lord Star Master</div>
 </InfinityMainLayout>
-<!-- </div>
-  </main> -->

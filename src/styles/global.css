@@ -2,39 +2,53 @@
 
 @config "../../tailwind.config.mjs";
 
-/* html,
-body {
-  height: 100%;
-} */
+/* ═══════════════════════════════════════════
+   INFINITY MUD - ARCANE GRIMOIRE THEME
+   Dark fantasy meets terminal magic
+   ═══════════════════════════════════════════ */
+
+/* --- BASE --- */
+html {
+  height: -webkit-fill-available;
+  background: #0a0a12;
+  scrollbar-color: #d4a24e #0d0d1a;
+}
 
 body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
-}
-html {
-  height: -webkit-fill-available;
-  background: #d1c1af;
+  color: #c8b89a;
 }
 
+::selection {
+  background: rgba(212, 162, 78, 0.3);
+  color: #f0c050;
+}
+
+/* --- NAVIGATION --- */
 .nav-text {
   font-family: MedievalSharp, cursive;
-  color: #7f3300;
-
+  color: #d4a24e;
   text-align: center;
+  letter-spacing: 0.05em;
 }
 
+/* --- HEADERS --- */
 .header-style {
   font-family: MedievalSharp, cursive;
-  color: #7f3300;
+  color: #d4a24e;
   padding-top: 3rem;
   padding-bottom: 1rem;
   text-align: center;
+  text-shadow: 0 0 20px rgba(212, 162, 78, 0.3), 0 0 40px rgba(212, 162, 78, 0.1);
+  position: relative;
 }
 
 .page-header {
-  font-size: 4em;
-  line-height: 3.5rem;
+  font-size: 3em;
+  line-height: 1.2;
   padding-top: 2rem;
+  letter-spacing: 0.02em;
 }
 
 @media (min-width: 768px) {
@@ -44,35 +58,56 @@ html {
 }
 
 .section-header {
-  font-size: 4em;
-  line-height: 1.5;
+  font-size: 2.5em;
+  line-height: 1.3;
+  position: relative;
+  display: inline-block;
 }
 
+@media (min-width: 768px) {
+  .section-header {
+    font-size: 3em;
+  }
+}
+
+.section-header::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #d4a24e, transparent);
+  margin: 0.5rem auto 0;
+}
+
+/* --- MAIN CONTENT --- */
 main {
   width: 100%;
   height: auto;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 main p {
-  /* font-size: 2.25em; */
-  color: #522100;
+  color: #c8b89a;
   margin-top: 0.75em;
   text-align: left;
   font-family: "IM Fell English", serif;
   font-optical-sizing: auto;
+  font-size: 1.05rem;
+  line-height: 1.7;
 }
 
+/* --- Q&A --- */
 .qa {
-  color: #522100;
+  color: #c8b89a;
   margin-top: 0.75em;
   text-align: left;
   font-family: "IM Fell English", serif;
   font-optical-sizing: auto;
 }
 
+/* --- LISTS --- */
 ul li {
-  color: #522100;
+  color: #c8b89a;
   margin-top: 0.75em;
   text-align: left;
   font-family: "IM Fell English", serif;
@@ -81,34 +116,47 @@ ul li {
 
 nav ul li {
   margin-top: 0;
-  font-size: 2rem;
-  color: #7f3300;
+  font-size: 1.5rem;
+  color: #d4a24e;
   text-align: center;
   list-style: none;
   margin-top: 0.75em;
 }
 
+/* --- SIGNATURE --- */
 .cachet {
-  /* image width = 210px and height = 250px */
-  /*  5 is one common denominator 210 = 5 * 42 */
   width: calc((100vw * 5) / 42);
-  height: auto; /* Height is auto ajusted */
+  height: auto;
   margin-top: 4rem;
   margin-left: auto;
+  filter: drop-shadow(0 0 12px rgba(212, 162, 78, 0.3));
 }
 
 #signature {
   text-align: right;
-  color: black;
+  color: #d4a24e;
   font-size: 250%;
   font-family: Caveat, cursive;
   padding-bottom: 3rem;
+  text-shadow: 0 0 15px rgba(212, 162, 78, 0.2);
 }
 
+/* --- LINKS --- */
 a {
   text-decoration: underline;
+  color: #d4a24e;
+  text-decoration-color: rgba(212, 162, 78, 0.4);
+  text-underline-offset: 3px;
+  transition: all 0.3s ease;
 }
 
+a:hover {
+  color: #f0c050;
+  text-decoration-color: #f0c050;
+  text-shadow: 0 0 8px rgba(240, 192, 80, 0.3);
+}
+
+/* --- CONTENT CONTAINER --- */
 .bg-paper-bg > .relative {
   max-width: 800px;
   margin: 0 auto;
@@ -118,6 +166,114 @@ a {
   max-width: 350px;
 }
 
+/* --- CODE BLOCKS --- */
+code {
+  background: rgba(212, 162, 78, 0.1);
+  border: 1px solid rgba(212, 162, 78, 0.2);
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9em;
+  color: #f0c050;
+}
+
+/* --- DECORATIVE ELEMENTS --- */
+.ornate-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 0;
+  opacity: 0.6;
+}
+
+.ornate-divider::before,
+.ornate-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #d4a24e, transparent);
+}
+
+/* --- AMBIENT BACKGROUND EFFECTS --- */
+.arcane-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(212, 162, 78, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(100, 60, 180, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(212, 162, 78, 0.02) 0%, transparent 50%);
+}
+
+/* --- PAGE SECTION STYLING --- */
+.page-section-wrapper {
+  position: relative;
+  padding: 1rem 0;
+}
+
+.page-section-wrapper + .page-section-wrapper {
+  border-top: 1px solid rgba(212, 162, 78, 0.08);
+}
+
+/* --- IMAGE STYLING --- */
+main img,
+main picture img {
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 30px rgba(212, 162, 78, 0.05);
+}
+
+/* --- SCROLL ANIMATIONS --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- PLAY BUTTON --- */
+.play-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #d4a24e 0%, #b8862a 100%);
+  color: #0a0a12 !important;
+  font-family: MedievalSharp, cursive;
+  font-weight: bold;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none !important;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 12px rgba(212, 162, 78, 0.3);
+  border: 1px solid rgba(240, 192, 80, 0.3);
+}
+
+.play-btn:hover {
+  background: linear-gradient(135deg, #f0c050 0%, #d4a24e 100%);
+  box-shadow: 0 4px 20px rgba(212, 162, 78, 0.5);
+  transform: translateY(-1px);
+  text-shadow: none !important;
+}
+
+/* --- FOOTER --- */
+.site-footer {
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(212, 162, 78, 0.1);
+  font-family: "IM Fell English", serif;
+  color: #8a7a6a;
+  font-size: 0.85rem;
+}
+
+/* --- ARCHIVE (keep for archive landing page in main layout) --- */
 .archive {
   max-width: 800px;
   margin: 0 auto;

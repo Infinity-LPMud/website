@@ -3,75 +3,100 @@ import NinetySixLayout from "../../layouts/NinetySixLayout.astro";
 ---
 
 <NinetySixLayout title="Guestbook">
-  <table>
-    <tr>
-      <th>Username</th>
-      <th>Comments</th>
-    </tr>
-    <tr>
-      <td>ShadowWarrior42</td>
-      <td
-        >Hey fellow warriors! Just defeated the mighty dragon in the Infinity
-        MUD. My sword glowed with the power of a thousand stars. Epic adventure!</td
-      >
-    </tr>
-    <tr>
-      <td>MysticSorcerer</td>
-      <td
-        >Greetings from the mystic realms! The spells in Infinity are
-        mind-blowing. Turned my foes into frogs and danced around them.
-        Fantastic game!</td
-      >
-    </tr>
-    <tr>
-      <td>PixelKnight1996</td>
-      <td
-        >Totally shocking that you're reading this. Be sure to stop by Devnull's
-        area on your way to Death's workroom!</td
-      >
-    </tr>
-    <tr>
-      <td>CyberWizardX</td>
-      <td
-        >The cyberspace in Infinity is mind-bending! Virtual reality meets dark
-        magic. Hacking spells and casting firewalls, truly a cyberpunk fantasy.</td
-      >
-    </tr>
-    <tr>
-      <td>GalacticExplorer</td>
-      <td
-        >Infinity MUD takes us to the far reaches of space! Explored distant
-        galaxies, met alien races. Feeling like a true galactic explorer.</td
-      >
-    </tr>
-    <tr>
-      <td>NinjaRogue</td>
-      <td
-        >Sneaking in shadows, slicing enemies with ninja precision. Infinity is
-        the ultimate ninja playground. Stealth mode engaged!</td
-      >
-    </tr>
-    <tr>
-      <td>RetroGamer1996</td>
-      <td
-        >Just stumbled upon this webpage - totally cool! Infinity MUD is like a
-        time machine to the golden age of gaming. Loving every moment!</td
-      >
-    </tr>
-    <tr>
-      <td>ElectronExplorer</td>
-      <td
-        >Surfed into this site and got hooked instantly! Infinity's text-based
-        adventures are a refreshing break from flashy graphics. My imagination
-        is on overdrive!</td
-      >
-    </tr>
-    <tr>
-      <td>CoolCat96</td>
-      <td
-        >This website is totally tubular! I dialed in and got connected right
-        away!</td
-      >
-    </tr>
-  </table>
+  <p style="text-align: center; font-size: 16px; color: #000080;">
+    <b>Sign Our Guestbook!</b><br />
+    <i>Let us know you were here! All adventurers welcome!</i>
+  </p>
+
+  <hr class="rainbow-hr" />
+
+  <div class="guestbook-entry">
+    <div class="username">ShadowWarrior42</div>
+    <div class="date">Posted: 12/15/96 at 11:42 PM EST</div>
+    <div class="comment">
+      Hey fellow warriors! Just defeated the mighty dragon in the Infinity
+      MUD. My sword glowed with the power of a thousand stars. Epic adventure!
+    </div>
+  </div>
+
+  <div class="guestbook-entry">
+    <div class="username">MysticSorcerer</div>
+    <div class="date">Posted: 12/12/96 at 3:18 AM EST</div>
+    <div class="comment">
+      Greetings from the mystic realms! The spells in Infinity are
+      mind-blowing. Turned my foes into frogs and danced around them.
+      Fantastic game!
+    </div>
+  </div>
+
+  <div class="guestbook-entry">
+    <div class="username">PixelKnight1996</div>
+    <div class="date">Posted: 12/08/96 at 7:55 PM EST</div>
+    <div class="comment">
+      Totally shocking that you're reading this. Be sure to stop by Devnull's
+      area on your way to Death's workroom!
+    </div>
+  </div>
+
+  <div class="guestbook-entry">
+    <div class="username">CyberWizardX</div>
+    <div class="date">Posted: 11/30/96 at 1:20 AM EST</div>
+    <div class="comment">
+      The cyberspace in Infinity is mind-bending! Virtual reality meets dark
+      magic. Hacking spells and casting firewalls, truly a cyberpunk fantasy.
+    </div>
+  </div>
+
+  <div class="guestbook-entry">
+    <div class="username">GalacticExplorer</div>
+    <div class="date">Posted: 11/22/96 at 9:30 PM EST</div>
+    <div class="comment">
+      Infinity MUD takes us to the far reaches of space! Explored distant
+      galaxies, met alien races. Feeling like a true galactic explorer.
+    </div>
+  </div>
+
+  <div class="guestbook-entry">
+    <div class="username">NinjaRogue</div>
+    <div class="date">Posted: 11/15/96 at 4:44 AM EST</div>
+    <div class="comment">
+      Sneaking in shadows, slicing enemies with ninja precision. Infinity is
+      the ultimate ninja playground. Stealth mode engaged!
+    </div>
+  </div>
+
+  <div class="guestbook-entry">
+    <div class="username">RetroGamer1996</div>
+    <div class="date">Posted: 11/01/96 at 6:12 PM EST</div>
+    <div class="comment">
+      Just stumbled upon this webpage - totally cool! Infinity MUD is like a
+      time machine to the golden age of gaming. Loving every moment!
+    </div>
+  </div>
+
+  <div class="guestbook-entry">
+    <div class="username">ElectronExplorer</div>
+    <div class="date">Posted: 10/28/96 at 2:33 AM EST</div>
+    <div class="comment">
+      Surfed into this site and got hooked instantly! Infinity's text-based
+      adventures are a refreshing break from flashy graphics. My imagination
+      is on overdrive!
+    </div>
+  </div>
+
+  <div class="guestbook-entry">
+    <div class="username">CoolCat96</div>
+    <div class="date">Posted: 10/20/96 at 8:00 PM EST</div>
+    <div class="comment">
+      This website is totally tubular! I dialed in and got connected right
+      away!
+    </div>
+  </div>
+
+  <hr class="rainbow-hr" />
+
+  <p style="text-align: center; color: #808080; font-size: 12px; font-family: Arial, sans-serif;">
+    Guestbook powered by <b>GuestWorld</b> &middot;
+    <a href="/archive/main" style="color: #0000ff;">Back to Archives</a>
+  </p>
 </NinetySixLayout>

@@ -5,11 +5,11 @@ interface Props {
 const { question } = Astro.props;
 ---
 
-<p class="text-xl">
-  <div class="qa text-3xl">
+<div class="reveal qa-block my-8 border-l-2 border-[rgba(212,162,78,0.3)] pl-5">
+  <h3 class="font-medieval text-[#d4a24e] text-2xl mb-3 leading-tight">
     {question}
-    <div class="qa text-xl">
-      <slot />
-    </div>
+  </h3>
+  <div class="qa text-xl leading-relaxed">
+    <slot />
   </div>
-</p>
+</div>

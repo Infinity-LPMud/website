@@ -14,21 +14,23 @@ const sizeProps =
   typeof img?.src === "string" ? { height: 500, width: 500 } : {};
 ---
 
-{title && <h1 class="header-style section-header">{title}</h1>}
-{
-  img && (
-    <div class="mb-1 w-full">
-      <Picture
-        src={img.src}
-        alt={img.alt}
-        class="mx-auto"
-        {...sizeProps}
-        loading={loading}
-      />
-    </div>
-  )
-}
+<div class="page-section-wrapper reveal">
+  {title && <h1 class="header-style section-header">{title}</h1>}
+  {
+    img && (
+      <div class="mb-1 w-full">
+        <Picture
+          src={img.src}
+          alt={img.alt}
+          class="mx-auto"
+          {...sizeProps}
+          loading={loading}
+        />
+      </div>
+    )
+  }
 
-<p class="text-xl">
-  <slot />
-</p>
+  <p class="text-xl">
+    <slot />
+  </p>
+</div>

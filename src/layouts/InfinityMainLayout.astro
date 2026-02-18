@@ -15,18 +15,6 @@ const { title } = Astro.props;
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- <link
-      href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap"
-      rel="stylesheet"
-    /> -->
     <link
       rel="preload"
       fetchpriority="high"
@@ -46,12 +34,19 @@ const { title } = Astro.props;
     </style>
     <SEOHead title={title} />
   </head>
-  <body class="min-h-screen bg-backgroundColor">
+  <body class="min-h-screen bg-[#0a0a12]">
+    <!-- Ambient arcane glow -->
+    <div class="arcane-bg"></div>
+
     <Navbar />
-    <main class="min-h-screen bg-opacity-75 bg-paper-bg">
+    <main class="min-h-screen bg-paper-bg relative z-10">
       <div class="relative px-6 mx-2 text-sm pt-28 md:px-1">
         <slot />
       </div>
+
+      <footer class="site-footer">
+        Infinity LPMud &middot; Forged in 1992 &middot; Still adventuring
+      </footer>
     </main>
 
     <script>
@@ -92,7 +87,21 @@ const { title } = Astro.props;
       }
 
       window.addEventListener("resize", toggleHamburgerAriaHidden);
-      toggleHamburgerAriaHidden(); // Call immediately to set initial state
+      toggleHamburgerAriaHidden();
+
+      // Scroll reveal animation
+      const revealElements = document.querySelectorAll(".reveal");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+      );
+      revealElements.forEach((el) => observer.observe(el));
     </script>
   </body>
 </html>

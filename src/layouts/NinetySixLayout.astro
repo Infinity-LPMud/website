@@ -29,18 +29,46 @@ const breadCrumbs = [
         )
       }
       <h1>Welcome to The Infinity Archives</h1>
+      <div style="font-size: 12px; color: #000080; font-family: Arial, sans-serif;">
+        Best viewed with <b>Netscape Navigator 3.0</b> at <b>800x600</b> resolution
+      </div>
     </header>
+
+    <!-- Marquee banner -->
+    <div class="marquee-banner">
+      <span class="marquee-text">
+        *** Welcome to the Infinity Archives! *** This page has been visited by adventurers from around the world! *** MUDs rule! *** Last updated: January 15th, 1996 *** You are visitor #004,242 ***
+      </span>
+    </div>
 
     <img
       src="/assets/archive/under_construction.gif"
       alt="Under Construction"
-      style="display: block; margin: 0 auto;"
+      style="display: block; margin: 8px auto;"
     />
 
     <div class="content-container">
       <slot />
     </div>
 
-    <footer>&copy; 1996 Infinity LPMud</footer>
+    <!-- Badges area -->
+    <div class="badges-area">
+      <span>HTML 2.0 Compatible</span>
+      <span>Made on a Mac</span>
+      <span>Netscape Now!</span>
+      <span>Free Speech Online</span>
+    </div>
+
+    <!-- Webring -->
+    <div class="webring">
+      [ <a href="#">&lt;&lt; Prev</a> |
+      <a href="#">MUD WebRing</a> |
+      <a href="#">Next &gt;&gt;</a> ]
+    </div>
+
+    <footer>
+      &copy; 1996 Infinity LPMud &middot; This page is under eternal construction &middot;
+      <span class="visitor-counter">Visitors: 004242</span>
+    </footer>
   </body>
 </html>

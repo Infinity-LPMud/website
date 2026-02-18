@@ -3,13 +3,13 @@ import { Image } from "astro:assets";
 import logo from "../assets/logo.png";
 ---
 
-<nav class="bg-nav border-gray-200 fixed w-full z-20 top-0 start-0">
+<nav class="bg-nav border-b border-[rgba(212,162,78,0.15)] fixed w-full z-20 top-0 start-0 backdrop-blur-sm">
   <div
     class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
   >
     <a
       id="logo"
-      class="flex items-center space-x-3 rtl:space-x-reverse cursor-pointer"
+      class="flex items-center space-x-3 rtl:space-x-reverse cursor-pointer no-underline"
       href="/"
     >
       <Image
@@ -18,22 +18,19 @@ import logo from "../assets/logo.png";
         height={80}
         width={80}
         loading="eager"
+        class="drop-shadow-[0_0_8px_rgba(212,162,78,0.3)]"
       />
     </a>
     <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-      <button
-        type="button"
-        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center"
-        ><a
-          href="https://www.infinitymud.com/play"
-          class="no-underline"
-          target="_blank">Play Now</a
-        ></button
-      >
+      <a
+        href="https://www.infinitymud.com/play"
+        class="play-btn text-sm"
+        target="_blank"
+      >Play Now</a>
       <button
         data-collapse-toggle="navbar-cta"
         type="button"
-        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-[#d4a24e] rounded-lg md:hidden hover:bg-[rgba(212,162,78,0.1)] focus:outline-none focus:ring-2 focus:ring-[rgba(212,162,78,0.3)] ml-3"
         aria-controls="navbar-cta"
         aria-expanded="false"
       >
@@ -60,27 +57,41 @@ import logo from "../assets/logo.png";
       id="navbar-cta"
     >
       <ul
-        class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0"
+        class="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0"
       >
         <li>
           <a
             href="/faq"
-            class="block py-2 px-3 md:p-0 font-medieval text-navText rounded hover:bg-gray-100 md:hover:bg-transparent no-underline"
+            class="block py-2 px-3 md:p-0 font-medieval text-[#d4a24e] rounded hover:bg-[rgba(212,162,78,0.1)] md:hover:bg-transparent no-underline hover:text-[#f0c050] transition-colors"
             aria-current="page">FAQ</a
           >
         </li>
         <li>
           <a
             href="/history"
-            class="block py-2 px-3 md:p-0 font-medieval text-navText rounded hover:bg-gray-100 md:hover:bg-transparent no-underline"
+            class="block py-2 px-3 md:p-0 font-medieval text-[#d4a24e] rounded hover:bg-[rgba(212,162,78,0.1)] md:hover:bg-transparent no-underline hover:text-[#f0c050] transition-colors"
             >History</a
           >
         </li>
         <li>
           <a
             href="/gameplay"
-            class="block py-2 px-3 md:p-0 font-medieval text-navText rounded hover:bg-gray-100 md:hover:bg-transparent no-underline"
+            class="block py-2 px-3 md:p-0 font-medieval text-[#d4a24e] rounded hover:bg-[rgba(212,162,78,0.1)] md:hover:bg-transparent no-underline hover:text-[#f0c050] transition-colors"
             >Gameplay</a
+          >
+        </li>
+        <li>
+          <a
+            href="/guilds"
+            class="block py-2 px-3 md:p-0 font-medieval text-[#d4a24e] rounded hover:bg-[rgba(212,162,78,0.1)] md:hover:bg-transparent no-underline hover:text-[#f0c050] transition-colors"
+            >Guilds</a
+          >
+        </li>
+        <li>
+          <a
+            href="/archive"
+            class="block py-2 px-3 md:p-0 font-medieval text-[#d4a24e] rounded hover:bg-[rgba(212,162,78,0.1)] md:hover:bg-transparent no-underline hover:text-[#f0c050] transition-colors"
+            >Archive</a
           >
         </li>
       </ul>

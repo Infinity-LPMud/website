@@ -3,42 +3,61 @@ import NinetySixLayout from "../../layouts/NinetySixLayout.astro";
 ---
 
 <NinetySixLayout title="Infinity Archives" noBreadCrumbs>
+  <p style="text-align: center; font-size: 16px; color: #000080;">
+    <b>Welcome to the Infinity Archives!</b><br />
+    <i>Your source for MUD history, guides, and more!</i>
+  </p>
+
+  <hr class="rainbow-hr" />
+
   <table>
     <tr>
       <th>Article</th>
       <th>Description</th>
     </tr>
     <tr>
-      <td><a href="/archive/quest-design">Guide to Quest Design</a></td>
-      <td>Macbeth's Guide to Quest Design</td>
+      <td>
+        <a href="/archive/quest-design">Guide to Quest Design</a>
+        <span class="badge-hot"> [HOT!]</span>
+      </td>
+      <td>Macbeth's Guide to Quest Design - A must-read for aspiring Wizards!</td>
     </tr>
     <tr>
-      <td><a href="/archive/history-of-muds">The History of MUDs</a></td>
-      <td>The history of MUDs by Richard Bartle</td>
+      <td>
+        <a href="/archive/history-of-muds">The History of MUDs</a>
+        <span class="badge-new">NEW!</span>
+      </td>
+      <td>The history of MUDs by Richard Bartle - the man who started it all!</td>
     </tr>
     <tr>
       <td><a href="/archive/testing">Things that happen in Testing</a></td>
-      <td>Some interesting things that can happen in testing!</td>
+      <td>Some interesting things that can happen during playtesting! (LOL)</td>
     </tr>
   </table>
-  <div class="flex justify-center items-center mt-2">
-    <div>
-      <div class="flex items-center justify-center">
-        <img src="/assets/archive/home.gif" />
-      </div>
-      <div class="text-center"><a href="/">Back to Infinity</a></div>
+
+  <hr class="rainbow-hr" />
+
+  <div style="text-align: center; margin: 15px 0;">
+    <div style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+      <img src="/assets/archive/home.gif" alt="Home" />
+      <a href="/" style="font-size: 16px;">Back to Infinity</a>
     </div>
   </div>
 
-  <!-- <div id="image-container">
-    <script
-      type="text/javascript"
-      src="//counter.websiteout.com/js/2/6/7411/0"
-      crossorigin="anonymous"></script>
-  </div> -->
-  <div class="text-center mx-auto flex items-center justify-center">
-    <a href="/archive/guestbook">Don't Forget To Sign Our Guestbook!</a><span
-      ><img src="/assets/archive/book.gif" /></span
-    >
+  <hr class="rainbow-hr" />
+
+  <div style="text-align: center; font-size: 18px; margin: 10px 0;">
+    <span class="blink" style="color: #ff0000;">&#9733;</span>
+    <a href="/archive/guestbook" style="font-size: 16px;">
+      Don't Forget To Sign Our Guestbook!
+    </a>
+    <img src="/assets/archive/book.gif" alt="Guestbook" style="vertical-align: middle;" />
+    <span class="blink" style="color: #ff0000;">&#9733;</span>
+  </div>
+
+  <div style="text-align: center; margin-top: 15px;">
+    <div class="visitor-counter">
+      You are visitor # 004,242
+    </div>
   </div>
 </NinetySixLayout>
