@@ -1,5 +1,6 @@
 ---
 import NinetySixLayout from "../../layouts/NinetySixLayout.astro";
+import HitCounter from "../../components/HitCounter.astro";
 ---
 
 <NinetySixLayout title="Infinity Archives" description="The Infinity MUD Archives — a collection of MUD history, quest design guides, Infocom testing stories, and a retro guestbook." noBreadCrumbs>
@@ -56,8 +57,6 @@ import NinetySixLayout from "../../layouts/NinetySixLayout.astro";
   </div>
 
   <div style="text-align: center; margin-top: 15px;">
-    <div class="visitor-counter">
-      You are visitor # 004,242
-    </div>
+    <HitCounter />
   </div>
 </NinetySixLayout>
