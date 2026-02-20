@@ -1,15 +1,15 @@
 import { defineConfig } from "astro/config";
-
+import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
-
-// import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  // Enable React to support React JSX components.
-  // integrations: [tailwind()],
   site: "https://www.infinitymud.com/",
-
+  integrations: [
+    sitemap({
+      filter: (page) => !page.includes("/403") && !page.includes("/404"),
+    }),
+  ],
   vite: {
     plugins: [tailwindcss()],
   },

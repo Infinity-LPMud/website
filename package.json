@@ -11,6 +11,10 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.6",
+    "@astrojs/sitemap": "^3.7.0",
+    "@fontsource-variable/caveat": "^5.2.8",
+    "@fontsource/im-fell-english": "^5.2.6",
+    "@fontsource/medievalsharp": "^5.2.8",
     "@tailwindcss/vite": "^4.1.3",
     "astro": "^5.16.9",
     "astro-seo": "^0.8.0",

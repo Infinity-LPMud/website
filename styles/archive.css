@@ -6,6 +6,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   background-color: #003366;
   background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='40' height='40' fill='%23003366'/%3E%3Ccircle cx='20' cy='20' r='1' fill='%23004488' opacity='0.5'/%3E%3C/svg%3E");
@@ -13,6 +17,11 @@ body {
   font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
   margin: 0;
   padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* --- HEADER --- */
@@ -51,7 +60,7 @@ header h1 {
 }
 
 @keyframes marquee-scroll {
-  0% { transform: translateX(100vw); }
+  0% { transform: translateX(100%); }
   100% { transform: translateX(-100%); }
 }
 
@@ -70,6 +79,25 @@ header h1 {
 @media only screen and (max-width: 768px) {
   .content-container {
     width: 95%;
+    padding: 10px;
+  }
+
+  .content-container table {
+    font-size: 12px;
+  }
+
+  .content-container th,
+  .content-container td {
+    padding: 5px;
+  }
+
+  header h1 {
+    font-size: 22px;
+  }
+
+  .badges-area span {
+    font-size: 9px;
+    padding: 2px 5px;
   }
 }
 
@@ -146,8 +174,6 @@ footer {
   color: #00ff00;
   text-align: center;
   padding: 8px;
-  position: fixed;
-  bottom: 0;
   width: 100%;
   font-family: 'Courier New', monospace;
   font-size: 12px;

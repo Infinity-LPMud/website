@@ -4,7 +4,7 @@ import cachet from "../assets/cachet.png";
 import clientUse from "../assets/client-use.png";
 import dragonBattle from "../assets/dragon-battle.png";
 import greetings3 from "../assets/greetings3.png";
-import orcBattle from "../assets/orc-battle.png";
+import duel from "../assets/duel.jpg";
 import quests from "../assets/quests.png";
 import PageHeader from "../components/PageHeader.astro";
 import PageSection from "../components/PageSection.astro";
@@ -12,7 +12,27 @@ import InfinityMainLayout from "../layouts/InfinityMainLayout.astro";
 import FrontPageTopPlayer from "../components/FrontPageTopPlayer.astro";
 ---
 
-<InfinityMainLayout>
+<InfinityMainLayout description="Infinity is a free, multi-player, text-based adventure game (MUD) full of mind-bending quests and epic battles. Running since 1992. No download required.">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "Infinity LPMud",
+        "url": "https://www.infinitymud.com/",
+        "description": "A free, multi-player, text-based adventure game full of mind-bending quests and epic battles."
+      },
+      {
+        "@type": "Organization",
+        "name": "Infinity LPMud",
+        "url": "https://www.infinitymud.com/",
+        "logo": "https://www.infinitymud.com/assets/logo.png",
+        "foundingDate": "1992",
+        "description": "Infinity MUD is a free text-based multiplayer adventure game running since 1992."
+      }
+    ]
+  })} />
+
   <!-- Hero Section -->
   <div class="text-center mb-4">
     <div class="mx-auto z-10 w-full md:w-3/5 mt-6 animate-fade-in">
@@ -78,7 +98,7 @@ import FrontPageTopPlayer from "../components/FrontPageTopPlayer.astro";
     beyond the conventional.
   </PageSection>
 
-  <PageSection title="Combat" img={{ src: orcBattle, alt: "Orc Image" }}>
+  <PageSection title="Combat" img={{ src: duel, alt: "Duel Image" }}>
     Prepare to engage in thrilling battles within, where combat and magic
     intertwine to create a dynamic and immersive experience. Whether you seek
     legendary weapons, enchanted artifacts, or mystical relics, the world of

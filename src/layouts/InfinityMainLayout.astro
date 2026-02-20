@@ -1,11 +1,16 @@
 ---
 import "../styles/global.css";
+import "@fontsource-variable/caveat";
+import "@fontsource/im-fell-english";
+import "@fontsource/im-fell-english/400-italic.css";
+import "@fontsource/medievalsharp";
 import Navbar from "../components/Navbar.astro";
 import SEOHead from "../components/SEOHead.astro";
 interface Props {
   title?: string;
+  description?: string;
 }
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <html lang="en">
@@ -13,8 +18,6 @@ const { title } = Astro.props;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="preload"
       fetchpriority="high"
@@ -29,10 +32,8 @@ const { title } = Astro.props;
       href="/assets/nav-bg.webp"
       type="image/webp"
     />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=IM+Fell+English:ital@0;1&family=MedievalSharp&display=swap");
-    </style>
-    <SEOHead title={title} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <SEOHead title={title} description={description} />
   </head>
   <body class="min-h-screen bg-[#0a0a12]">
     <!-- Ambient arcane glow -->
@@ -43,11 +44,11 @@ const { title } = Astro.props;
       <div class="relative px-6 mx-2 text-sm pt-28 md:px-1">
         <slot />
       </div>
-
-      <footer class="site-footer">
-        Infinity LPMud &middot; Forged in 1992 &middot; Still adventuring
-      </footer>
     </main>
+
+    <footer class="site-footer">
+      Infinity LPMud &middot; Forged in 1992 &middot; Still adventuring
+    </footer>
 
     <script>
       const toggleButton = document.querySelector<HTMLButtonElement>(
@@ -66,7 +67,7 @@ const { title } = Astro.props;
             targetElement.classList.toggle("hidden");
             toggleButton.setAttribute(
               "aria-expanded",
-              isHidden ? "false" : "true"
+              isHidden ? "true" : "false"
             );
           }
         });
@@ -89,7 +90,7 @@ const { title } = Astro.props;
       window.addEventListener("resize", toggleHamburgerAriaHidden);
       toggleHamburgerAriaHidden();
 
-      // Scroll reveal animation
+      // Scroll reveal animation — only hide elements when JS is active
       const revealElements = document.querySelectorAll(".reveal");
       const observer = new IntersectionObserver(
         (entries) => {
@@ -101,7 +102,10 @@ const { title } = Astro.props;
         },
         { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
       );
-      revealElements.forEach((el) => observer.observe(el));
+      revealElements.forEach((el) => {
+        el.classList.add("js-reveal-init");
+        observer.observe(el);
+      });
     </script>
   </body>
 </html>

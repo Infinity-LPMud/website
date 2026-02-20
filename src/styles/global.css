@@ -228,13 +228,15 @@ main picture img {
 }
 
 /* --- SCROLL ANIMATIONS --- */
-.reveal {
+/* Content is visible by default for crawlers and no-JS.
+   JS adds .js-reveal-init to opt elements into the animation. */
+.js-reveal-init {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.reveal.visible {
+.js-reveal-init.visible {
   opacity: 1;
   transform: translateY(0);
 }

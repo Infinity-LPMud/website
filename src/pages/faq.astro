@@ -4,7 +4,46 @@ import QandA from "../components/QandA.astro";
 import InfinityMainLayout from "../layouts/InfinityMainLayout.astro";
 ---
 
-<InfinityMainLayout title="FAQ">
+<InfinityMainLayout title="FAQ" description="Frequently asked questions about Infinity MUD — what kind of MUD it is, player killing rules, administration, hardware, and how to get involved.">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What Kind of MUD Is Infinity?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Infinity started in 1992 as an LPMud running the 3.1.2 driver. It now runs on the latest stable release of LDMud 3.3.720 with a heavily modified mudlib."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Infinity support player killing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Infinity supports player-killing on a very limited basis, restricted to the Arena — one room in Town where anything goes. The focus is on quests and socializing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who makes Infinity and Why?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The ArchWizards of Infinity keep the game running — writing rules, policing the MUD, quality controlling areas, and providing a fun environment. Contact them at infinity@infinitymud.com."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What Kind of Hardware Does Infinity Run On?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Infinity runs on a 64-bit VM running CentOS 7.9, with 4 GB RAM and 450 GB disk space. On disk, Infinity consumes approximately 1.7GB."
+        }
+      }
+    ]
+  })} />
+
   <PageHeader title="FAQ" />
   <QandA question="What Kind of Mud Is Infinity?">
     Infinity originally started out in the beginning of 1992 as an LPMud running

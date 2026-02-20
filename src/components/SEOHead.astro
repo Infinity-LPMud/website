@@ -2,44 +2,53 @@
 import { SEO } from "astro-seo";
 interface Props {
   title?: string;
+  description?: string;
 }
 
-const { title: _title, ...rest } = Astro.props;
+const { title: _title, description: _description, ...rest } = Astro.props;
 const title = _title
   ? `${_title} - InfinityMUD.com`
   : "Infinity LPMud: Prepare For Adventure";
+const description =
+  _description ||
+  "Infinity is a free, multi-player, text-based adventure game full of mind-bending quests and epic battles. No download required. Play now.";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <SEO
   title={title}
-  description="Infinity is a free, multi-player, text-based adventure game full of mind-bending quests and epic battles. No download required. Play now"
+  description={description}
+  canonical={canonicalURL.href}
   openGraph={{
     basic: {
       title: title,
-      type: "Gaming",
+      type: "website",
       image: "https://www.infinitymud.com/assets/logo.png",
+      url: canonicalURL.href,
+    },
+    optional: {
+      description: description,
+      siteName: "Infinity LPMud",
+      locale: "en_US",
     },
   }}
   extend={{
-    // extending the default link tags
     link: [{ rel: "icon", href: "/favicon.ico" }],
-    // extending the default meta tags
     meta: [
+      { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:image",
         content: "https://www.infinitymud.com/assets/logo.png",
       },
       {
         name: "twitter:title",
-        content: "Infinity LPmud: Prepare For Adventure",
+        content: title,
       },
       {
         name: "twitter:description",
-        content:
-          "A free, multi-player, text-based adventure game full of mind-bending quests and epic battles. No download required. Play now.",
+        content: description,
       },
       { name: "theme-color", content: "#ddbf99" },
-
       {
         name: "theme-color",
         content: "#8e6338",

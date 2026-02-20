@@ -6,8 +6,9 @@ import SEOHead from "../components/SEOHead.astro";
 interface Props {
   breadCrumbs: { href: string; label: string }[];
   title: string;
+  description?: string;
 }
-const { breadCrumbs, title } = Astro.props;
+const { breadCrumbs, title, description } = Astro.props;
 ---
 
 <html lang="en">
@@ -15,7 +16,7 @@ const { breadCrumbs, title } = Astro.props;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <SEOHead title={title} />
+    <SEOHead title={title} description={description} />
   </head>
   <body class="archive">
     {
