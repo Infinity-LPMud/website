@@ -32,10 +32,6 @@
       "name": "Aurora",
       "location": "Massachusetts"
     },
-    "siker": {
-      "name": "Siker",
-      "location": "Montana"
-    },
     "beautiful": {
       "name": "Beautiful",
       "location": "Oregon"
@@ -104,13 +100,13 @@
       "name": "Cyrene",
       "location": "Texas"
     },
-    "deathshadow": {
-      "name": "Deathshadow",
-      "location": "Puerto Rico"
-    },
     "daymaxeon": {
       "name": "Daymaxeon",
       "location": "Rhode Island"
+    },
+    "deathshadow": {
+      "name": "Deathshadow",
+      "location": "Puerto Rico"
     },
     "django": {
       "name": "Django",
@@ -324,6 +320,10 @@
       "name": "Micky",
       "location": "Massachusetts"
     },
+    "minx": {
+      "name": "Minx",
+      "location": "Unknown"
+    },
     "mongoose": {
       "name": "Mongoose",
       "location": "Minnesota"
@@ -363,6 +363,10 @@
     "ninja": {
       "name": "Ninja",
       "location": "Australia"
+    },
+    "nsd": {
+      "name": "Nsd",
+      "location": "Unknown"
     },
     "pelops": {
       "name": "Pelops",
@@ -460,6 +464,10 @@
       "name": "Sigma",
       "location": "Minnesota"
     },
+    "siker": {
+      "name": "Siker",
+      "location": "Montana"
+    },
     "slashdude": {
       "name": "Slashdude",
       "location": "Minnesota"
@@ -527,6 +535,10 @@
     "trixx": {
       "name": "Trixx",
       "location": "Ohio"
+    },
+    "ulysses": {
+      "name": "Ulysses",
+      "location": "Unknown"
     },
     "venger": {
       "name": "Venger",
@@ -652,6 +664,14 @@
       ]
     },
     {
+      "slug": "balcony",
+      "filename": "balcony.jpg",
+      "caption": "Catia on her Balcony - Alexandria, VA, May 2004",
+      "users": [
+        "catia"
+      ]
+    },
+    {
       "slug": "bandit",
       "filename": "bandit.jpg",
       "caption": "Bandit, Triumph's pitbull",
@@ -722,6 +742,14 @@
       "caption": "Catia at her graduation from Northeastern University",
       "users": [
         "catia"
+      ]
+    },
+    {
+      "slug": "bigtoad-zombie",
+      "filename": "bigtoad-zombie.jpg",
+      "caption": "Bigtoad",
+      "users": [
+        "bigtoad"
       ]
     },
     {
@@ -918,6 +946,14 @@
       ]
     },
     {
+      "slug": "formalnsd",
+      "filename": "FormalNsd.gif",
+      "caption": "Nsd",
+      "users": [
+        "nsd"
+      ]
+    },
+    {
       "slug": "gargamel",
       "filename": "gargamel.jpg",
       "caption": "Gargamel",
@@ -1098,12 +1134,28 @@
       ]
     },
     {
+      "slug": "jaleo",
+      "filename": "jaleo.jpg",
+      "caption": "Catia at Jaleo Restaurant in Behesda, MD - May 2004",
+      "users": [
+        "catia"
+      ]
+    },
+    {
       "slug": "jardomegav20",
       "filename": "jardomegav20.jpg",
       "caption": "Jardo and Megaweapon",
       "users": [
         "megaweapon",
         "jardo"
+      ]
+    },
+    {
+      "slug": "jenkissy_copy.sized",
+      "filename": "Jenkissy_copy.sized.jpg",
+      "caption": "Sage",
+      "users": [
+        "sage"
       ]
     },
     {
@@ -1276,6 +1328,14 @@
     {
       "slug": "lucy3",
       "filename": "lucy3.jpg",
+      "caption": "Lucy",
+      "users": [
+        "lucy"
+      ]
+    },
+    {
+      "slug": "lucy4",
+      "filename": "lucy4.jpg",
       "caption": "Lucy",
       "users": [
         "lucy"
@@ -1459,6 +1519,15 @@
       ]
     },
     {
+      "slug": "pa270010",
+      "filename": "pa270010.jpg",
+      "caption": "Alyssa and Minx, Halloween 2002",
+      "users": [
+        "alyssa",
+        "minx"
+      ]
+    },
+    {
       "slug": "paris",
       "filename": "paris.jpg",
       "caption": "Catia's Carte Orange Metro Pic from Paris",
@@ -1502,14 +1571,6 @@
       ]
     },
     {
-      "slug": "prom1",
-      "filename": "prom1.jpg",
-      "caption": "Tramm and Siker at West Valley High Jr. Prom.",
-      "users": [
-        "siker"
-      ]
-    },
-    {
       "slug": "pud_jas",
       "filename": "pud_jas.jpg",
       "caption": "Puddles and Jasmine",
@@ -1532,6 +1593,14 @@
       "caption": "Purge",
       "users": [
         "purge"
+      ]
+    },
+    {
+      "slug": "qualstar",
+      "filename": "Qualstar.jpg",
+      "caption": "Qualstar",
+      "users": [
+        "qualstar"
       ]
     },
     {
@@ -1730,6 +1799,22 @@
       ]
     },
     {
+      "slug": "siker1",
+      "filename": "siker1.jpg",
+      "caption": "Siker and his wife",
+      "users": [
+        "siker"
+      ]
+    },
+    {
+      "slug": "siker2",
+      "filename": "siker2.jpg",
+      "caption": "Siker pops the question",
+      "users": [
+        "siker"
+      ]
+    },
+    {
       "slug": "sit",
       "filename": "sit.jpg",
       "caption": "(back row) Lasje, Duck, Xanadu, Sage, and Fuce; (front row) Mardoch, Krioni, Bill, and Calyxx",
@@ -1839,6 +1924,14 @@
       ]
     },
     {
+      "slug": "sunshine2003",
+      "filename": "sunshine2003.jpg",
+      "caption": "Sunshine",
+      "users": [
+        "sunshine"
+      ]
+    },
+    {
       "slug": "surf1",
       "filename": "surf1.jpg",
       "caption": "Brassmonkey, North Crystal pier in San Diego (2001).",
@@ -1885,6 +1978,30 @@
       "users": [
         "durin",
         "cyrene"
+      ]
+    },
+    {
+      "slug": "ulysses007",
+      "filename": "ulysses007.jpg",
+      "caption": "Ulysses at the North Pole",
+      "users": [
+        "ulysses"
+      ]
+    },
+    {
+      "slug": "ulysses030",
+      "filename": "ulysses030.jpg",
+      "caption": "Ulysses at the North Pole",
+      "users": [
+        "ulysses"
+      ]
+    },
+    {
+      "slug": "ulysses039",
+      "filename": "ulysses039.jpg",
+      "caption": "Ulysses at the North Pole",
+      "users": [
+        "ulysses"
       ]
     },
     {
