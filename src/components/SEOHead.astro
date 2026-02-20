@@ -3,6 +3,8 @@ import { SEO } from "astro-seo";
 interface Props {
   title?: string;
   description?: string;
+  noindex?: boolean;
+  nofollow?: boolean;
 }
 
 const { title: _title, description: _description, ...rest } = Astro.props;
