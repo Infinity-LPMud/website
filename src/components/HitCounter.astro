@@ -191,7 +191,7 @@ const { apiUrl = "/api/counter.php" } = Astro.props;
     var digits = wrap.querySelectorAll(".hc-digit");
     var sessionKey = "infinity-archive-counted";
     var alreadyCounted = !!sessionStorage.getItem(sessionKey);
-    var BASE_COUNT = 4242;
+    var BASE_COUNT = 0;
 
     function displayCount(count) {
       var str = String(count).padStart(7, "0");

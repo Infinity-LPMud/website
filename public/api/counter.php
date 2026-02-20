@@ -6,7 +6,7 @@
 // Store counter alongside SORT_LEVEL.json in the data directory.
 // Adjust this path if your data dir lives elsewhere on the server.
 $COUNTER_FILE = __DIR__ . '/../data/counter.json';
-$BASE_COUNT = 4242;
+$BASE_COUNT = 0;
 
 header('Content-Type: application/json');
 header('Cache-Control: no-cache');
