@@ -1,0 +1,60 @@
+---
+import InfinityMainLayout from "../../../layouts/InfinityMainLayout.astro";
+import PageHeader from "../../../components/PageHeader.astro";
+import GalleryThumbnail from "../../../components/GalleryThumbnail.astro";
+import {
+  getAllUsers,
+  getUser,
+  getImagesByUser,
+  locationSlug,
+} from "../../../lib/gallery";
+
+export function getStaticPaths() {
+  return Object.keys(getAllUsers())
+    .filter((u) => getImagesByUser(u).length > 0)
+    .map((username) => ({
+      params: { user: username },
+    }));
+}
+
+const { user: username } = Astro.params;
+const user = getUser(username!);
+const images = getImagesByUser(username!);
+---
+
+<InfinityMainLayout
+  title={user?.name || username}
+  description={`Photos of ${user?.name} from Infinity MUD.`}
+>
+  <PageHeader title={user?.name} />
+
+  <div class="reveal">
+    <p class="text-xl">
+      <a href="/gallery/">&larr; Back to Gallery</a>
+    </p>
+    {
+      user && (
+        <p class="text-xl">
+          Location:{" "}
+          <a href={`/gallery/location/${locationSlug(user.location)}`}>
+            {user.location}
+          </a>
+        </p>
+      )
+    }
+  </div>
+
+  <div class="page-section-wrapper reveal">
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+      {
+        images.map((img) => (
+          <GalleryThumbnail
+            slug={img.slug}
+            filename={img.filename}
+            caption={img.caption}
+          />
+        ))
+      }
+    </div>
+  </div>
+</InfinityMainLayout>
