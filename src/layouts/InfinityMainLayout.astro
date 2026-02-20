@@ -9,8 +9,10 @@ import SEOHead from "../components/SEOHead.astro";
 interface Props {
   title?: string;
   description?: string;
+  noindex?: boolean;
+  nofollow?: boolean;
 }
-const { title, description } = Astro.props;
+const { title, description, noindex, nofollow } = Astro.props;
 ---
 
 <html lang="en">
@@ -33,7 +35,7 @@ const { title, description } = Astro.props;
       type="image/webp"
     />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <SEOHead title={title} description={description} />
+    <SEOHead title={title} description={description} noindex={noindex} nofollow={nofollow} />
   </head>
   <body class="min-h-screen bg-[#0a0a12]">
     <!-- Ambient arcane glow -->

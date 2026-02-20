@@ -16,6 +16,8 @@ const img = getImageBySlug(image!);
 <InfinityMainLayout
   title={img?.caption || "Image"}
   description={`Photo: ${img?.caption}`}
+  noindex
+  nofollow
 >
   <PageHeader title={img?.caption} />
 

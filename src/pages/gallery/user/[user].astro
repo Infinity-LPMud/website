@@ -25,6 +25,8 @@ const images = getImagesByUser(username!);
 <InfinityMainLayout
   title={user?.name || username}
   description={`Photos of ${user?.name} from Infinity MUD.`}
+  noindex
+  nofollow
 >
   <PageHeader title={user?.name} />
 
