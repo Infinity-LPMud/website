@@ -7,7 +7,10 @@ export default defineConfig({
   site: "https://www.infinitymud.com/",
   integrations: [
     sitemap({
-      filter: (page) => !page.includes("/403") && !page.includes("/404"),
+      filter: (page) =>
+        !page.includes("/403") &&
+        !page.includes("/404") &&
+        !page.includes("/gallery/"),
     }),
   ],
   vite: {

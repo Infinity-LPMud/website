@@ -1,0 +1,46 @@
+---
+interface Props {
+  slug: string;
+  filename: string;
+  caption: string;
+}
+const { slug, filename, caption } = Astro.props;
+---
+
+<a href={`/gallery/image/${slug}`} class="gallery-thumb group">
+  <div class="aspect-square overflow-hidden rounded">
+    <img
+      src={`/user-images/images/${filename}`}
+      alt={caption}
+      loading="lazy"
+      decoding="async"
+      class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+    />
+  </div>
+  <p class="gallery-thumb-caption">{caption}</p>
+</a>
+
+<style>
+  .gallery-thumb {
+    display: block;
+    background: rgba(10, 10, 18, 0.6);
+    border: 1px solid rgba(212, 162, 78, 0.15);
+    border-radius: 6px;
+    padding: 0.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .gallery-thumb:hover {
+    border-color: rgba(212, 162, 78, 0.4);
+    box-shadow: 0 0 20px rgba(212, 162, 78, 0.1);
+  }
+
+  .gallery-thumb-caption {
+    font-size: 0.85rem;
+    color: #c8b89a;
+    margin-top: 0.4rem;
+    text-align: center;
+    line-height: 1.3;
+  }
+</style>

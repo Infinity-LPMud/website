@@ -1,0 +1,82 @@
+---
+import InfinityMainLayout from "../../../layouts/InfinityMainLayout.astro";
+import PageHeader from "../../../components/PageHeader.astro";
+import { getAllImages, getImageBySlug, getUser } from "../../../lib/gallery";
+
+export function getStaticPaths() {
+  return getAllImages().map((img) => ({
+    params: { image: img.slug },
+  }));
+}
+
+const { image } = Astro.params;
+const img = getImageBySlug(image!);
+---
+
+<InfinityMainLayout
+  title={img?.caption || "Image"}
+  description={`Photo: ${img?.caption}`}
+>
+  <PageHeader title={img?.caption} />
+
+  <div class="reveal">
+    <p class="text-xl">
+      <a href="/gallery/">&larr; Back to Gallery</a>
+    </p>
+  </div>
+
+  {
+    img && img.users.length > 0 && (
+      <div class="tagged-users reveal">
+        <span class="tagged-label">In this photo:</span>
+        {img.users.map((username, i) => {
+          const user = getUser(username);
+          return (
+            <>
+              <a href={`/gallery/user/${username}`}>
+                {user?.name || username}
+              </a>
+              {i < img.users.length - 1 && ", "}
+            </>
+          );
+        })}
+      </div>
+    )
+  }
+
+  <div class="page-section-wrapper reveal">
+    <div class="gallery-full-image">
+      <img
+        src={`/user-images/images/${img?.filename}`}
+        alt={img?.caption}
+        loading="eager"
+        decoding="async"
+      />
+    </div>
+  </div>
+</InfinityMainLayout>
+
+<style>
+  .gallery-full-image {
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  .gallery-full-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  .tagged-users {
+    text-align: center;
+    font-family: "IM Fell English", serif;
+    font-size: 1.05rem;
+    color: #c8b89a;
+  }
+
+  .tagged-label {
+    color: #8a7a6a;
+    margin-right: 0.3rem;
+  }
+</style>
