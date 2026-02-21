@@ -189,8 +189,9 @@ const { apiUrl = "/api/counter.php" } = Astro.props;
 
     var apiUrl = wrap.getAttribute("data-api-url") || "/api/counter.php";
     var digits = wrap.querySelectorAll(".hc-digit");
-    var sessionKey = "infinity-archive-counted";
-    var alreadyCounted = !!sessionStorage.getItem(sessionKey);
+    var countedKey = "infinity-archive-counted-at";
+    var lastCounted = parseInt(localStorage.getItem(countedKey) || "0", 10);
+    var alreadyCounted = (Date.now() - lastCounted) < 86400000; /* 24 hours */
     var BASE_COUNT = 0;
 
     function displayCount(count) {
@@ -229,12 +230,12 @@ const { apiUrl = "/api/counter.php" } = Astro.props;
         return res.json();
       })
       .then(function (data) {
-        if (!alreadyCounted) sessionStorage.setItem(sessionKey, "1");
+        if (!alreadyCounted) localStorage.setItem(countedKey, String(Date.now()));
         displayCount(data.count);
       })
       .catch(function () {
         var count = getLocalCount();
-        if (!alreadyCounted) sessionStorage.setItem(sessionKey, "1");
+        if (!alreadyCounted) localStorage.setItem(countedKey, String(Date.now()));
         displayCount(count);
       });
   });
